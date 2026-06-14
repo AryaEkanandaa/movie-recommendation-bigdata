@@ -34,8 +34,8 @@ from dotenv import load_dotenv
 
 BASE_URL = "https://api.themoviedb.org/3"
 
-# Project root: file ini disimpan di scripts/scraping/fetch_tmdb_movies.py
-# Jadi parents[2] = root folder movie-recommendation-bigdata
+# ML root: file ini disimpan di ml/scripts/scraping/fetch_tmdb_movies.py
+# Jadi parents[2] = folder ml
 try:
     PROJECT_ROOT = Path(__file__).resolve().parents[2]
 except NameError:
@@ -58,7 +58,7 @@ START_YEAR = int(os.getenv("START_YEAR", "1900"))
 END_YEAR = int(os.getenv("END_YEAR", "2026"))
 REQUEST_SLEEP_SECONDS = float(os.getenv("REQUEST_SLEEP_SECONDS", "0.25"))
 
-# Folder output diarahkan ke struktur project
+# Folder output diarahkan ke struktur ml/data
 DATA_DIR = PROJECT_ROOT / "data" / "raw" / "tmdb"
 BATCH_DIR = DATA_DIR / "discover_batches"
 LOG_DIR = DATA_DIR / "failures"

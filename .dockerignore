@@ -1,0 +1,11 @@
+.git
+.DS_Store
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+ml/data/
+ml/logs/
+qdrant_storage/

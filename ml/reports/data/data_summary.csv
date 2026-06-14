@@ -1,0 +1,15 @@
+metric,value
+rows_input,80549.0
+rows_final,80290.0
+rows_removed,259.0
+unique_movies,80290.0
+duplicate_ids_final,0.0
+empty_title_final,0.0
+empty_movie_document_weighted_final,0.0
+empty_genres_text_final,0.0
+avg_vote_average,6.0055
+avg_vote_count,303.61
+avg_popularity,1.232
+avg_recommendation_quality_score,0.9429
+min_release_year,1980.0
+max_release_year,2026.0

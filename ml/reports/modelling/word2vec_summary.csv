@@ -1,0 +1,9 @@
+metric,value
+movie_count,"80290"
+vector_size,"64"
+min_count,"5"
+max_iter,"5"
+vocabulary_size,"82793"
+avg_filtered_token_count,"91.7755"
+vector_output,"/workspace/ml/data/processed/movie_vectors_word2vec.parquet"
+model_output,"/workspace/ml/models/recommendation/word2vec_model"

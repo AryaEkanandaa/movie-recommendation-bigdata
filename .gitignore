@@ -1,10 +1,19 @@
+# Environment
+.env
 venv/
 .venv/
-.env
+
+# Python
 __pycache__/
 *.pyc
-.DS_Store
 
-logs/
+# OS / editor
+.DS_Store
 .ipynb_checkpoints/
-data/
+
+# Generated ML data and logs
+ml/data/
+ml/logs/
+ml/models/
+models/
+qdrant_storage/
