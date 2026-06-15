@@ -86,3 +86,20 @@ Smoke test rekomendasi dari Qdrant:
 ```bash
 docker compose run --rm ml python ml/scripts/indexing/test_qdrant_search.py "Interstellar"
 ```
+
+## Evaluasi Rekomendasi
+
+Setelah Qdrant terisi, jalankan evaluasi contoh rekomendasi:
+
+```bash
+docker compose run --rm ml python ml/scripts/modelling/evaluate_recommendations.py
+```
+
+Output:
+
+- `ml/reports/modelling/recommendation_examples.csv`
+- `ml/reports/modelling/model_evaluation_summary.csv`
+
+Notebook pendukung presentasi:
+
+- `ml/notebooks/EVALUATION.ipynb`

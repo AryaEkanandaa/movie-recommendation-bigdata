@@ -28,9 +28,9 @@ Status:
 | TF-IDF + Cosine Similarity | Done | `notebooks/MODELLING.ipynb` | Sudah ada sebagai model utama notebook. |
 | K-Means clustering | Done | `notebooks/MODELLING.ipynb` | Sudah ada cluster summary dan top terms. |
 | Hybrid ranking | Partial | `notebooks/MODELLING.ipynb` | Sudah ada, tetapi perlu mapping kolom dataset terbaru. |
-| Evaluation test cases | Partial | `notebooks/MODELLING.ipynb` | Sudah ada 5 query; docs meminta lebih lengkap. |
-| Export `recommendation_examples.csv` | Partial | Ada code export di notebook | File output belum terlihat di `reports/modelling/` pada repo saat ini. |
-| Export `model_comparison_summary.csv` | Partial | Ada code export di notebook | File output belum terlihat di `reports/modelling/`. |
+| Evaluation test cases | Done | `ml/scripts/modelling/evaluate_recommendations.py`, `ml/reports/modelling/model_evaluation_summary.csv` | 9 query x 10 rekomendasi sudah dievaluasi. |
+| Export `recommendation_examples.csv` | Done | `ml/reports/modelling/recommendation_examples.csv` | 90 baris contoh rekomendasi sudah dibuat. |
+| Export `model_comparison_summary.csv` | Partial | `ml/notebooks/MODELLING.ipynb`, `docs/MODEL_EVALUATION.md` | Pembanding CountVectorizer/TF-IDF dijelaskan sebagai baseline; summary CSV pembanding lama belum digenerate ulang. |
 | Export `kmeans_cluster_summary.csv` | Partial | Ada code export di notebook | File output belum terlihat di `reports/modelling/`. |
 | Word2Vec dense vector | Done | `ml/scripts/modelling/train_word2vec.py` | Vector size 64, vocabulary 82.793, total 80.290 film. |
 | Export dense vectors | Done | `ml/data/processed/movie_vectors_word2vec.parquet` | Output lokal di-ignore karena besar. |
@@ -74,7 +74,7 @@ Status:
 | Progress tracker | Done | `docs/PROJECT_PROGRESS.md` | Dokumen ini. |
 | README | Not started | Belum ada `README.md` | Perlu dibuat setelah struktur MVP fix. |
 | Architecture doc | Not started | Belum ada `docs/ARCHITECTURE.md` | Bisa dibuat setelah backend/Qdrant diputuskan. |
-| Model evaluation doc | Not started | Belum ada `docs/MODEL_EVALUATION.md` | Menunggu output evaluasi final. |
+| Model evaluation doc | Done | `docs/MODEL_EVALUATION.md` | Menjelaskan model, library, Qdrant, dan cara evaluasi. |
 | Demo script | Not started | Belum ada `docs/DEMO_SCRIPT.md` | Menunggu aplikasi MVP. |
 
 ## Jangan Dikerjakan Ulang Dari Nol

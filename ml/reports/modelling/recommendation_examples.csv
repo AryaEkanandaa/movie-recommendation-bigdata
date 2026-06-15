@@ -1,0 +1,91 @@
+query,source_id,source_title,source_release_year,source_genres,rank,recommended_id,recommended_title,recommended_release_year,recommended_genres,vote_average,vote_count,recommendation_quality_score,similarity_score,genre_overlap
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,1,286217,The Martian,2015,science fiction drama adventure,7.7,21253,1.0,0.9460315,1.0
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,2,687163,Project Hail Mary,2026,science fiction adventure,8.671,4888,1.0,0.93543583,0.75
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,3,95,Armageddon,1998,action science fiction adventure,6.835,8589,1.0,0.9261312,0.6
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,4,13475,Star Trek,2009,science fiction action adventure,7.431,10500,1.0,0.92261237,0.6
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,5,75,Mars Attacks!,1996,comedy fantasy science fiction,6.423,5884,1.0,0.9219886,0.3333333333333333
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,6,329865,Arrival,2016,drama science fiction mystery,7.626,19383,1.0,0.91860884,0.6
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,7,7453,The Hitchhiker's Guide to the Galaxy,2005,adventure comedy science fiction,6.685,4248,1.0,0.9141648,0.6
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,8,406759,Moonfall,2022,science fiction adventure action,6.251,3587,1.0,0.91408527,0.6
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,9,274870,Passengers,2016,drama romance science fiction,6.955,14243,1.0,0.91025376,0.6
+Interstellar,157336,Interstellar,2014,adventure drama science fiction,10,696506,Mickey 17,2025,science fiction comedy adventure,6.837,3595,1.0,0.9093883,0.6
+Inception,27205,Inception,2010,action science fiction adventure,1,339988,The Circle,2017,drama thriller science fiction,5.523,4589,1.0,0.8851342,0.3333333333333333
+Inception,27205,Inception,2010,action science fiction adventure,2,9620,Paycheck,2003,action adventure mystery science fiction thriller,6.22,2039,1.0,0.869462,0.6666666666666666
+Inception,27205,Inception,2010,action science fiction adventure,3,1635,The Island,2005,action thriller science fiction,6.697,5884,1.0,0.8661348,0.6
+Inception,27205,Inception,2010,action science fiction adventure,4,131634,The Hunger Games: Mockingjay - Part 2,2015,action adventure science fiction,6.9,13350,1.0,0.85448706,1.0
+Inception,27205,Inception,2010,action science fiction adventure,5,97020,RoboCop,2014,action adventure crime science fiction thriller,5.886,5858,1.0,0.8509606,0.6666666666666666
+Inception,27205,Inception,2010,action science fiction adventure,6,912974,Accused,2023,drama thriller,6.2,77,1.0,0.84813356,0.0
+Inception,27205,Inception,2010,action science fiction adventure,7,1379587,Utopia,2024,mystery thriller action science fiction,5.643,63,1.0,0.844133,0.5
+Inception,27205,Inception,2010,action science fiction adventure,8,798645,The Running Man,2025,action thriller science fiction,6.791,1615,1.0,0.8419043,0.6
+Inception,27205,Inception,2010,action science fiction adventure,9,49530,In Time,2011,action thriller science fiction,6.971,12172,1.0,0.84096295,0.6
+Inception,27205,Inception,2010,action science fiction adventure,10,1124,The Prestige,2006,drama mystery science fiction,8.208,17617,1.0,0.8392017,0.3333333333333333
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,1,49026,The Dark Knight Rises,2012,action crime drama thriller,7.795,24399,1.0,0.9510254,0.75
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,2,268,Batman,1989,fantasy action crime,7.2,8583,1.0,0.9467982,0.5
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,3,272,Batman Begins,2005,drama crime action,7.727,22645,1.0,0.9280948,0.5
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,4,414906,The Batman,2022,crime mystery thriller,7.7,11975,1.0,0.91624945,0.5
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,5,364,Batman Returns,1992,action fantasy,6.946,7099,1.0,0.9154409,0.25
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,6,495764,Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn),2020,action crime,6.877,10820,1.0,0.9015551,0.6666666666666666
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,7,414,Batman Forever,1995,action crime fantasy,5.456,5591,1.0,0.90041214,0.5
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,8,14919,Batman: Mask of the Phantasm,1993,animation crime mystery,7.496,1247,1.0,0.9002696,0.2
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,9,24873,Death Wish 3,1985,action crime thriller,6.2,481,1.0,0.898052,1.0
+The Dark Knight,155,The Dark Knight,2008,action crime thriller,10,8592,Dick Tracy,1990,adventure comedy crime,6.2,1045,1.0,0.8976979,0.2
+Titanic,597,Titanic,1997,drama romance,1,59709,Britannic,2000,action drama history tv movie war,6.833,78,1.0,0.8973998,0.14285714285714285
+Titanic,597,Titanic,1997,drama romance,2,52886,Castaway,1986,adventure romance drama,6.3,122,1.0,0.8560762,0.6666666666666666
+Titanic,597,Titanic,1997,drama romance,3,244875,The Whale,2013,drama history,5.3,16,1.0,0.8540206,0.3333333333333333
+Titanic,597,Titanic,1997,drama romance,4,2133,The Perfect Storm,2000,drama adventure action,6.5,2562,1.0,0.85106003,0.25
+Titanic,597,Titanic,1997,drama romance,5,153102,12 Days of Terror,2004,drama horror tv movie,5.542,36,1.0,0.84667885,0.2
+Titanic,597,Titanic,1997,drama romance,6,205775,In the Heart of the Sea,2015,thriller drama adventure action history,6.8,4356,1.0,0.84506285,0.16666666666666666
+Titanic,597,Titanic,1997,drama romance,7,514921,The Aeronauts,2019,adventure drama romance,6.802,1201,1.0,0.8412398,0.6666666666666666
+Titanic,597,Titanic,1997,drama romance,8,61348,The Lost Valentine,2011,tv movie romance drama,6.944,124,1.0,0.8410766,0.5
+Titanic,597,Titanic,1997,drama romance,9,5689,The Blue Lagoon,1980,adventure drama romance,6.143,2022,1.0,0.84061134,0.6666666666666666
+Titanic,597,Titanic,1997,drama romance,10,429300,Adrift,2018,thriller romance adventure,6.841,2699,1.0,0.8395798,0.25
+Toy Story,862,Toy Story,1995,family comedy animation adventure,1,10193,Toy Story 3,2010,animation family comedy,7.807,15750,1.0,0.93864965,0.75
+Toy Story,862,Toy Story,1995,family comedy animation adventure,2,863,Toy Story 2,1999,animation comedy family,7.608,14918,1.0,0.9277019,0.75
+Toy Story,862,Toy Story,1995,family comedy animation adventure,3,301528,Toy Story 4,2019,family comedy animation adventure,7.5,10551,1.0,0.92736816,1.0
+Toy Story,862,Toy Story,1995,family comedy animation adventure,4,585,"Monsters, Inc.",2001,animation comedy family fantasy,7.851,19808,1.0,0.91070324,0.6
+Toy Story,862,Toy Story,1995,family comedy animation adventure,5,8920,Garfield,2004,comedy family,5.73,4246,1.0,0.90275216,0.5
+Toy Story,862,Toy Story,1995,family comedy animation adventure,6,213121,Toy Story of Terror!,2013,adventure animation comedy family,7.209,1011,0.8571428571428571,0.9005693,1.0
+Toy Story,862,Toy Story,1995,family comedy animation adventure,7,420821,Chip 'n Dale: Rescue Rangers,2022,animation family comedy adventure mystery,6.989,1373,1.0,0.8959844,0.8
+Toy Story,862,Toy Story,1995,family comedy animation adventure,8,9982,Chicken Little,2005,animation family comedy,5.912,4157,1.0,0.8928207,0.75
+Toy Story,862,Toy Story,1995,family comedy animation adventure,9,13932,Jack-Jack Attack,2005,adventure animation family,7.294,990,0.8571428571428571,0.8913965,0.75
+Toy Story,862,Toy Story,1995,family comedy animation adventure,10,24034,Teacher's Pet,2004,animation family music comedy drama,6.088,40,1.0,0.89080477,0.5
+Avatar,1096978,Avatar,2006,drama,1,56810,The Blind Sunflowers,2008,drama,6.5,70,1.0,0.90824646,1.0
+Avatar,1096978,Avatar,2006,drama,2,189362,Sunday Light,2007,drama romance thriller,6.0,10,1.0,0.9026129,0.3333333333333333
+Avatar,1096978,Avatar,2006,drama,3,1078744,Escape,2024,drama thriller,5.4,60,1.0,0.90165716,0.5
+Avatar,1096978,Avatar,2006,drama,4,1407635,The Good Manners,2025,drama,6.5,20,1.0,0.899864,1.0
+Avatar,1096978,Avatar,2006,drama,5,8088,Broken Embraces,2009,drama romance thriller,7.154,715,1.0,0.89896935,0.3333333333333333
+Avatar,1096978,Avatar,2006,drama,6,766804,Wild Flowers,2022,drama,6.3,36,0.8571428571428571,0.8983697,1.0
+Avatar,1096978,Avatar,2006,drama,7,1053993,The Wait,2023,horror drama fantasy,6.0,48,1.0,0.897532,0.3333333333333333
+Avatar,1096978,Avatar,2006,drama,8,77855,Of Love and Other Demons,2009,drama,6.4,19,1.0,0.8951504,1.0
+Avatar,1096978,Avatar,2006,drama,9,61539,Rage,2009,drama thriller romance,5.6,22,1.0,0.894918,0.3333333333333333
+Avatar,1096978,Avatar,2006,drama,10,115504,Broken Silence,2001,drama,5.654,26,0.8571428571428571,0.8935455,1.0
+Parasite,48311,Parasite,1982,horror science fiction,1,40221,The Borrower,1991,science fiction comedy horror,5.0,60,1.0,0.9178598,0.75
+Parasite,48311,Parasite,1982,horror science fiction,2,77195,Neon City,1991,science fiction adventure action,4.895,38,0.8571428571428571,0.89998996,0.4
+Parasite,48311,Parasite,1982,horror science fiction,3,96469,Frogtown II,1992,action science fiction,3.6,19,0.8571428571428571,0.8998195,0.5
+Parasite,48311,Parasite,1982,horror science fiction,4,26889,The Brother from Another Planet,1984,comedy science fiction drama,6.658,98,1.0,0.89969826,0.4
+Parasite,48311,Parasite,1982,horror science fiction,5,92562,Metamorphosis: The Alien Factor,1990,horror science fiction,6.1,41,1.0,0.8990623,1.0
+Parasite,48311,Parasite,1982,horror science fiction,6,11683,Land of the Dead,2005,horror science fiction thriller,6.264,1801,1.0,0.8957772,0.75
+Parasite,48311,Parasite,1982,horror science fiction,7,28338,Evil Spawn,1987,horror science fiction,4.026,19,0.8571428571428571,0.89509284,1.0
+Parasite,48311,Parasite,1982,horror science fiction,8,55792,Simon,1980,comedy science fiction,6.333,24,1.0,0.8949791,0.5
+Parasite,48311,Parasite,1982,horror science fiction,9,158571,Cybernator,1991,science fiction action,3.2,12,1.0,0.8926616,0.5
+Parasite,48311,Parasite,1982,horror science fiction,10,74321,Planet of the Vampire Women,2011,science fiction horror,4.1,11,0.7142857142857143,0.89169896,1.0
+La La Land,313369,La La Land,2016,comedy drama romance,1,42297,Burlesque,2010,drama romance,7.213,2379,1.0,0.9184487,0.6666666666666666
+La La Land,313369,La La Land,2016,comedy drama romance,2,50220,The Seat Filler,2004,comedy romance,4.647,17,1.0,0.8953707,0.6666666666666666
+La La Land,313369,La La Land,2016,comedy drama romance,3,117262,Sunset Strip,2000,comedy drama,4.9,26,1.0,0.8928698,0.6666666666666666
+La La Land,313369,La La Land,2016,comedy drama romance,4,786,Almost Famous,2000,drama music,7.5,3104,1.0,0.8924538,0.25
+La La Land,313369,La La Land,2016,comedy drama romance,5,243,High Fidelity,2000,drama comedy romance music,7.1,2194,1.0,0.88595617,0.75
+La La Land,313369,La La Land,2016,comedy drama romance,6,13763,Purple Rain,1984,drama music romance,6.699,414,1.0,0.8855601,0.5
+La La Land,313369,La La Land,2016,comedy drama romance,7,37964,Brown Sugar,2002,romance comedy,6.628,129,1.0,0.8851907,0.6666666666666666
+La La Land,313369,La La Land,2016,comedy drama romance,8,306959,"Stand Up, Strip Down",2014,thriller,3.6,11,1.0,0.88476837,0.0
+La La Land,313369,La La Land,2016,comedy drama romance,9,19366,Josie and the Pussycats,2001,comedy music,5.812,373,1.0,0.88459814,0.25
+La La Land,313369,La La Land,2016,comedy drama romance,10,10028,Honey,2003,music drama romance,6.351,1242,1.0,0.8819294,0.5
+Spirited Away,129,Spirited Away,2001,animation family fantasy,1,942881,Lonely Castle in the Mirror,2022,animation drama mystery fantasy,7.1,106,1.0,0.96373177,0.4
+Spirited Away,129,Spirited Away,2001,animation family fantasy,2,51739,The Secret World of Arrietty,2010,fantasy animation family,7.67,3175,1.0,0.9615929,1.0
+Spirited Away,129,Spirited Away,2001,animation family fantasy,3,648457,DEEMO Memorial Keys,2022,animation drama romance mystery fantasy,7.5,18,1.0,0.9611633,0.3333333333333333
+Spirited Away,129,Spirited Away,2001,animation family fantasy,4,492136,Destiny: The Tale of Kamakura,2017,mystery drama fantasy,7.421,38,1.0,0.9545947,0.2
+Spirited Away,129,Spirited Away,2001,animation family fantasy,5,1359607,Miss Kobayashi's Dragon Maid: A lonely dragon wants to be loved,2025,animation comedy fantasy,8.522,46,1.0,0.9530922,0.5
+Spirited Away,129,Spirited Away,2001,animation family fantasy,6,77194,The Boy Who Saw the Wind,2000,adventure family animation fantasy,6.9,10,1.0,0.952898,0.75
+Spirited Away,129,Spirited Away,2001,animation family fantasy,7,428288,Napping Princess,2017,fantasy adventure animation drama science fiction,6.683,131,1.0,0.9508199,0.2857142857142857
+Spirited Away,129,Spirited Away,2001,animation family fantasy,8,1030588,Ghost Cat Anzu,2024,animation fantasy comedy family,6.865,48,1.0,0.9482226,0.75
+Spirited Away,129,Spirited Away,2001,animation family fantasy,9,4935,Howl's Moving Castle,2004,fantasy animation adventure,8.388,11107,1.0,0.9471463,0.5
+Spirited Away,129,Spirited Away,2001,animation family fantasy,10,507411,Natsume's Book of Friends the Movie: Ephemeral Bond,2018,animation fantasy drama,7.4,32,1.0,0.94644755,0.5
