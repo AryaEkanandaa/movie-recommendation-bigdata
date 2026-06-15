@@ -41,7 +41,7 @@ embedding/vector film 64 dimensi
 Vector film disimpan di:
 
 ```text
-ml/data/processed/movie_vectors_word2vec.parquet
+ml/data/processed/vectors/movie_vectors_word2vec.parquet
 ```
 
 Model Word2Vec disimpan sebagai folder PySpark ML:
@@ -109,6 +109,7 @@ Metric sederhana:
 
 - jumlah rekomendasi yang berhasil dikembalikan,
 - rata-rata similarity score,
+- rata-rata hybrid score,
 - rata-rata genre overlap,
 - rata-rata vote average,
 - rata-rata vote count.
@@ -122,9 +123,37 @@ docker compose run --rm ml python ml/scripts/modelling/evaluate_recommendations.
 Output:
 
 ```text
-ml/reports/modelling/recommendation_examples.csv
-ml/reports/modelling/model_evaluation_summary.csv
+ml/reports/modelling/evaluation/recommendation_examples.csv
+ml/reports/modelling/evaluation/model_evaluation_summary.csv
 ```
+
+Untuk membandingkan CountVectorizer, TF-IDF, dan Word2Vec + Qdrant:
+
+```bash
+docker compose run --rm ml python ml/scripts/modelling/compare_text_models.py
+```
+
+Output:
+
+```text
+ml/reports/modelling/comparison/model_comparison_examples.csv
+ml/reports/modelling/comparison/model_comparison_summary.csv
+```
+
+## Hybrid Re-Ranking
+
+Qdrant mengembalikan kandidat berdasarkan similarity vector. Setelah itu kandidat diurutkan ulang dengan hybrid score:
+
+```text
+hybrid_score =
+0.70 * similarity_score
++ 0.10 * rating_norm
++ 0.08 * vote_count_norm
++ 0.07 * popularity_norm
++ 0.05 * quality_norm
+```
+
+Alasannya: similarity saja belum cukup. Film yang mirip tetapi kurang kuat dari sisi rating, vote count, popularity, atau metadata quality bisa turun, sedangkan film yang mirip dan kualitasnya lebih baik bisa naik.
 
 ## Hasil Evaluasi Saat Ini
 
@@ -132,42 +161,60 @@ Evaluasi terakhir menghasilkan:
 
 ```text
 total recommendations     : 90
-overall avg similarity    : 0.8992
-overall avg genre overlap : 0.5740
-overall avg vote average  : 6.5181
-overall avg vote count    : 4079.2
+overall avg similarity    : 0.8921
+overall avg hybrid score  : 0.7613
+overall avg genre overlap : 0.5671
+overall avg vote average  : 7.1796
+overall avg vote count    : 7034.0
 ```
 
 Ringkasan per query:
 
-| Query | Avg Similarity | Avg Genre Overlap | Avg Vote Average |
-| --- | ---: | ---: | ---: |
-| Avatar | 0.8991 | 0.6833 | 6.1508 |
-| Inception | 0.8541 | 0.5300 | 6.5039 |
-| Interstellar | 0.9219 | 0.6283 | 7.1414 |
-| La La Land | 0.8907 | 0.4917 | 6.0450 |
-| Parasite | 0.8987 | 0.6800 | 5.0176 |
-| Spirited Away | 0.9540 | 0.5219 | 7.4449 |
-| The Dark Knight | 0.9156 | 0.5067 | 6.9597 |
-| Titanic | 0.8513 | 0.3843 | 6.4005 |
-| Toy Story | 0.9079 | 0.7400 | 6.9988 |
+| Query | Avg Similarity | Avg Hybrid | Avg Genre Overlap | Avg Vote Average |
+| --- | ---: | ---: | ---: | ---: |
+| Avatar | 0.8927 | 0.7460 | 0.5333 | 7.0441 |
+| Inception | 0.8464 | 0.7378 | 0.5467 | 7.0102 |
+| Interstellar | 0.9173 | 0.7917 | 0.6183 | 7.3754 |
+| La La Land | 0.8780 | 0.7511 | 0.5583 | 7.3764 |
+| Parasite | 0.8937 | 0.7331 | 0.6250 | 5.7559 |
+| Spirited Away | 0.9513 | 0.8010 | 0.5333 | 7.8912 |
+| The Dark Knight | 0.9097 | 0.7858 | 0.4933 | 7.4161 |
+| Titanic | 0.8427 | 0.7231 | 0.4060 | 7.0826 |
+| Toy Story | 0.8973 | 0.7824 | 0.7900 | 7.6644 |
 
 Contoh hasil untuk `Interstellar`:
 
-| Rank | Recommendation | Year | Similarity |
-| ---: | --- | ---: | ---: |
-| 1 | The Martian | 2015 | 0.9460 |
-| 2 | Project Hail Mary | 2026 | 0.9354 |
-| 3 | Armageddon | 1998 | 0.9261 |
-| 4 | Star Trek | 2009 | 0.9226 |
-| 5 | Mars Attacks! | 1996 | 0.9220 |
-| 6 | Arrival | 2016 | 0.9186 |
+| Rank | Recommendation | Year | Similarity | Hybrid |
+| ---: | --- | ---: | ---: | ---: |
+| 1 | The Martian | 2015 | 0.9460 | 0.8329 |
+| 2 | Project Hail Mary | 2026 | 0.9354 | 0.8171 |
+| 3 | Arrival | 2016 | 0.9186 | 0.8093 |
+| 4 | Star Trek | 2009 | 0.9226 | 0.7917 |
+| 5 | Passengers | 2016 | 0.9103 | 0.7857 |
+| 6 | Armageddon | 1998 | 0.9261 | 0.7845 |
+
+## Perbandingan Model
+
+Perbandingan pada 9 query x 10 rekomendasi:
+
+| Model | Recommendation Count | Avg Score | Avg Genre Overlap | Avg Vote Average | Avg Vote Count |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| CountVectorizer + Cosine | 90 | 0.2951 | 0.5928 | 6.4357 | 2137.5 |
+| Word2Vec + Qdrant | 90 | 0.8921 | 0.5671 | 7.1796 | 7034.0 |
+| TF-IDF + Cosine | 90 | 0.2566 | 0.2589 | 6.5080 | 2003.7 |
+
+Interpretasi:
+
+- CountVectorizer memiliki genre overlap rata-rata sedikit lebih tinggi, tetapi rekomendasinya lebih sederhana karena hanya berbasis frekuensi kata.
+- Word2Vec + Qdrant memberi rekomendasi dengan rating dan vote count rata-rata lebih tinggi, serta cocok untuk runtime aplikasi karena vector-nya dense dan cepat dicari.
+- TF-IDF tetap berguna sebagai baseline teks, tetapi pada konfigurasi evaluasi ini genre overlap-nya lebih rendah.
+- Untuk MVP, Word2Vec + Qdrant dipilih sebagai runtime karena paling cocok untuk vector database dan deployment backend.
 
 Catatan evaluasi:
 
 - Hasil untuk `Interstellar`, `The Dark Knight`, dan `Toy Story` cukup relevan secara genre/konteks.
-- Beberapa query masih bisa menghasilkan film yang kurang populer atau kurang sesuai secara kualitas.
-- Karena itu tahap berikutnya adalah menambahkan hybrid re-ranking agar similarity digabung dengan rating, vote count, popularity, dan quality score.
+- Beberapa query masih bisa menghasilkan film yang kurang sesuai secara semantik, sehingga intent parsing dan filter metadata tetap diperlukan di backend.
+- Hybrid re-ranking memperbaiki kualitas rata-rata rekomendasi dari sisi rating dan vote count.
 
 ## Jawaban Singkat Untuk Presentasi
 

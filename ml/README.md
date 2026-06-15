@@ -13,6 +13,12 @@ Folder ini berisi pekerjaan machine learning untuk sistem rekomendasi film.
 
 Dataset lokal disimpan di `ml/data/` dan tidak di-push ke GitHub karena ukurannya besar. Jika perlu menjalankan ulang pipeline, generate ulang data lewat script di `scripts/` atau letakkan dataset lokal di struktur `ml/data/`.
 
+Struktur data lokal:
+
+- `ml/data/curated/`: dataset input yang sudah diperkaya dan siap dipakai pipeline final.
+- `ml/data/processed/final/`: dataset final dan payload aplikasi.
+- `ml/data/processed/vectors/`: vector/embedding film hasil model.
+
 ## Docker
 
 Setup Docker tahap awal menyediakan:
@@ -46,8 +52,8 @@ python ml/scripts/preprocessing/finalize_datasets.py
 
 Output:
 
-- `ml/data/processed/movies_final.csv`: dataset utama untuk modelling.
-- `ml/data/processed/movies_payload.csv`: metadata ringkas untuk backend/Qdrant payload.
+- `ml/data/processed/final/movies_final.csv`: dataset utama untuk modelling.
+- `ml/data/processed/final/movies_payload.csv`: metadata ringkas untuk backend/Qdrant payload.
 - `ml/reports/data/data_summary.csv`: ringkasan kualitas dataset.
 
 ## Training Word2Vec
@@ -61,8 +67,8 @@ docker compose run --rm ml python ml/scripts/modelling/train_word2vec.py
 Output:
 
 - `ml/models/recommendation/word2vec_model/`: model Word2Vec lokal.
-- `ml/data/processed/movie_vectors_word2vec.parquet`: vector film untuk Qdrant.
-- `ml/reports/modelling/word2vec_summary.csv`: ringkasan training.
+- `ml/data/processed/vectors/movie_vectors_word2vec.parquet`: vector film untuk Qdrant.
+- `ml/reports/modelling/training/word2vec_summary.csv`: ringkasan training.
 
 ## Indexing Ke Qdrant
 
@@ -74,8 +80,8 @@ docker compose run --rm ml python ml/scripts/indexing/index_qdrant.py
 
 Script ini membaca:
 
-- `ml/data/processed/movie_vectors_word2vec.parquet`
-- `ml/data/processed/movies_payload.csv`
+- `ml/data/processed/vectors/movie_vectors_word2vec.parquet`
+- `ml/data/processed/final/movies_payload.csv`
 
 Lalu membuat/mengisi collection Qdrant:
 
@@ -97,9 +103,22 @@ docker compose run --rm ml python ml/scripts/modelling/evaluate_recommendations.
 
 Output:
 
-- `ml/reports/modelling/recommendation_examples.csv`
-- `ml/reports/modelling/model_evaluation_summary.csv`
+- `ml/reports/modelling/evaluation/recommendation_examples.csv`
+- `ml/reports/modelling/evaluation/model_evaluation_summary.csv`
 
 Notebook pendukung presentasi:
 
 - `ml/notebooks/EVALUATION.ipynb`
+
+## Perbandingan Model
+
+Untuk membandingkan CountVectorizer, TF-IDF, dan Word2Vec + Qdrant:
+
+```bash
+docker compose run --rm ml python ml/scripts/modelling/compare_text_models.py
+```
+
+Output:
+
+- `ml/reports/modelling/comparison/model_comparison_examples.csv`
+- `ml/reports/modelling/comparison/model_comparison_summary.csv`

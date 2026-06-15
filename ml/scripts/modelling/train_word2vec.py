@@ -2,12 +2,12 @@
 Train Word2Vec movie vectors for Qdrant indexing.
 
 Input:
-- ml/data/processed/movies_final.csv
+- ml/data/processed/final/movies_final.csv
 
 Outputs:
 - ml/models/recommendation/word2vec_model/
-- ml/data/processed/movie_vectors_word2vec.parquet
-- ml/reports/modelling/word2vec_summary.csv
+- ml/data/processed/vectors/movie_vectors_word2vec.parquet
+- ml/reports/modelling/training/word2vec_summary.csv
 """
 
 from __future__ import annotations
@@ -24,12 +24,13 @@ from pyspark.sql import functions as F
 
 ML_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ML_DIR / "data"
-PROCESSED_DIR = DATA_DIR / "processed"
-REPORT_DIR = ML_DIR / "reports" / "modelling"
+FINAL_DIR = DATA_DIR / "processed" / "final"
+VECTOR_DIR = DATA_DIR / "processed" / "vectors"
+REPORT_DIR = ML_DIR / "reports" / "modelling" / "training"
 MODEL_DIR = ML_DIR / "models" / "recommendation" / "word2vec_model"
 
-MOVIES_FINAL_PATH = PROCESSED_DIR / "movies_final.csv"
-VECTOR_OUTPUT = PROCESSED_DIR / "movie_vectors_word2vec.parquet"
+MOVIES_FINAL_PATH = FINAL_DIR / "movies_final.csv"
+VECTOR_OUTPUT = VECTOR_DIR / "movie_vectors_word2vec.parquet"
 SUMMARY_OUTPUT = REPORT_DIR / "word2vec_summary.csv"
 
 VECTOR_SIZE = int(os.getenv("WORD2VEC_VECTOR_SIZE", "64"))
@@ -63,6 +64,7 @@ def main() -> None:
         )
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    VECTOR_DIR.mkdir(parents=True, exist_ok=True)
     MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
 
     spark = build_spark()

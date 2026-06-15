@@ -1,0 +1,11 @@
+query,recommendation_count,avg_similarity_score,avg_hybrid_score,avg_genre_overlap,avg_vote_average,avg_vote_count
+Avatar,10,0.8927,0.746,0.5333,7.0441,305.1
+Inception,10,0.8464,0.7378,0.5467,7.0102,12261.0
+Interstellar,10,0.9173,0.7917,0.6183,7.3754,11811.9
+La La Land,10,0.878,0.7511,0.5583,7.3764,6140.5
+Parasite,10,0.8937,0.7331,0.625,5.7559,256.1
+Spirited Away,10,0.9513,0.801,0.5333,7.8912,2803.7
+The Dark Knight,10,0.9097,0.7858,0.4933,7.4161,12042.0
+Titanic,10,0.8427,0.7231,0.406,7.0826,5966.0
+Toy Story,10,0.8973,0.7824,0.79,7.6644,11719.7
+__overall__,90,0.8921,0.7613,0.5671,7.1796,7034.0

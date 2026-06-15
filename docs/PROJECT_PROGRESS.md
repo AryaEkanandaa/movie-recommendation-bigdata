@@ -12,12 +12,12 @@ Status:
 
 | Task | Status | Bukti | Catatan |
 | --- | --- | --- | --- |
-| Dataset film tersedia | Done | `data/tmdb_movie_documents.csv`, `data/tmdb_movies_model_ready.csv` | Sekitar 80 ribu film. |
-| EDA | Done | `notebooks/EDA.ipynb`, `reports/figures/` | Grafik dan analisis EDA sudah ada. |
+| Dataset film tersedia | Done | `ml/data/curated/tmdb_movie_documents.csv`, `ml/data/curated/tmdb_movies_model_ready.csv` | Sekitar 80 ribu film. |
+| EDA | Done | `notebooks/EDA.ipynb`, `ml/reports/eda_figures/` | Grafik dan analisis EDA sudah ada dan dipisahkan per konteks. |
 | Preprocessing | Done | `notebooks/PREPROCESSING.ipynb`, `reports/preprocessing/preprocessing_summary.csv` | Dataset hasil preprocessing sudah muncul di folder `data/`. |
 | Validasi duplicate/kosong | Partial | Ada di notebook preprocessing/modelling | Perlu dibuat ringkas sebagai output final jika ingin laporan rapi. |
-| Export `data/processed/movies_final.csv` | Done | `ml/scripts/preprocessing/finalize_datasets.py` | Output lokal ada di `ml/data/processed/movies_final.csv` dan tidak di-push. |
-| Export `data/processed/movies_payload.csv` | Done | `ml/scripts/preprocessing/finalize_datasets.py` | Output lokal ada di `ml/data/processed/movies_payload.csv` dan tidak di-push. |
+| Export `data/processed/movies_final.csv` | Done | `ml/scripts/preprocessing/finalize_datasets.py` | Output lokal ada di `ml/data/processed/final/movies_final.csv` dan tidak di-push. |
+| Export `data/processed/movies_payload.csv` | Done | `ml/scripts/preprocessing/finalize_datasets.py` | Output lokal ada di `ml/data/processed/final/movies_payload.csv` dan tidak di-push. |
 | Buat `reports/data/data_summary.csv` | Done | `ml/reports/data/data_summary.csv` | Ringkasan final dataset sudah dibuat. |
 
 ## Modelling
@@ -27,13 +27,13 @@ Status:
 | CountVectorizer baseline | Done | `notebooks/MODELLING.ipynb` | Sudah ada fungsi rekomendasi. |
 | TF-IDF + Cosine Similarity | Done | `notebooks/MODELLING.ipynb` | Sudah ada sebagai model utama notebook. |
 | K-Means clustering | Done | `notebooks/MODELLING.ipynb` | Sudah ada cluster summary dan top terms. |
-| Hybrid ranking | Partial | `notebooks/MODELLING.ipynb` | Sudah ada, tetapi perlu mapping kolom dataset terbaru. |
-| Evaluation test cases | Done | `ml/scripts/modelling/evaluate_recommendations.py`, `ml/reports/modelling/model_evaluation_summary.csv` | 9 query x 10 rekomendasi sudah dievaluasi. |
-| Export `recommendation_examples.csv` | Done | `ml/reports/modelling/recommendation_examples.csv` | 90 baris contoh rekomendasi sudah dibuat. |
-| Export `model_comparison_summary.csv` | Partial | `ml/notebooks/MODELLING.ipynb`, `docs/MODEL_EVALUATION.md` | Pembanding CountVectorizer/TF-IDF dijelaskan sebagai baseline; summary CSV pembanding lama belum digenerate ulang. |
+| Hybrid ranking | Done | `ml/scripts/modelling/evaluate_recommendations.py` | Qdrant candidates di-rerank dengan similarity, rating, vote count, popularity, dan quality score. |
+| Evaluation test cases | Done | `ml/scripts/modelling/evaluate_recommendations.py`, `ml/reports/modelling/evaluation/model_evaluation_summary.csv` | 9 query x 10 rekomendasi sudah dievaluasi. |
+| Export `recommendation_examples.csv` | Done | `ml/reports/modelling/evaluation/recommendation_examples.csv` | 90 baris contoh rekomendasi sudah dibuat. |
+| Export `model_comparison_summary.csv` | Done | `ml/reports/modelling/comparison/model_comparison_summary.csv` | CountVectorizer, TF-IDF, dan Word2Vec + Qdrant sudah dibandingkan. |
 | Export `kmeans_cluster_summary.csv` | Partial | Ada code export di notebook | File output belum terlihat di `reports/modelling/`. |
 | Word2Vec dense vector | Done | `ml/scripts/modelling/train_word2vec.py` | Vector size 64, vocabulary 82.793, total 80.290 film. |
-| Export dense vectors | Done | `ml/data/processed/movie_vectors_word2vec.parquet` | Output lokal di-ignore karena besar. |
+| Export dense vectors | Done | `ml/data/processed/vectors/movie_vectors_word2vec.parquet` | Output lokal di-ignore karena besar. |
 
 ## Vector Database
 

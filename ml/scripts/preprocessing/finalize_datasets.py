@@ -2,12 +2,12 @@
 Finalize movie datasets for modelling and application payloads.
 
 Inputs:
-- ml/data/tmdb_movie_documents.csv
-- ml/data/tmdb_movies_model_ready.csv
+- ml/data/curated/tmdb_movie_documents.csv
+- ml/data/curated/tmdb_movies_model_ready.csv
 
 Outputs:
-- ml/data/processed/movies_final.csv
-- ml/data/processed/movies_payload.csv
+- ml/data/processed/final/movies_final.csv
+- ml/data/processed/final/movies_payload.csv
 - ml/reports/data/data_summary.csv
 """
 
@@ -20,14 +20,15 @@ import pandas as pd
 
 ML_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ML_DIR / "data"
+CURATED_DIR = DATA_DIR / "curated"
 REPORT_DIR = ML_DIR / "reports" / "data"
-PROCESSED_DIR = DATA_DIR / "processed"
+FINAL_DIR = DATA_DIR / "processed" / "final"
 
-MOVIE_DOCUMENTS_PATH = DATA_DIR / "tmdb_movie_documents.csv"
-MODEL_READY_PATH = DATA_DIR / "tmdb_movies_model_ready.csv"
+MOVIE_DOCUMENTS_PATH = CURATED_DIR / "tmdb_movie_documents.csv"
+MODEL_READY_PATH = CURATED_DIR / "tmdb_movies_model_ready.csv"
 
-MOVIES_FINAL_OUTPUT = PROCESSED_DIR / "movies_final.csv"
-MOVIES_PAYLOAD_OUTPUT = PROCESSED_DIR / "movies_payload.csv"
+MOVIES_FINAL_OUTPUT = FINAL_DIR / "movies_final.csv"
+MOVIES_PAYLOAD_OUTPUT = FINAL_DIR / "movies_payload.csv"
 DATA_SUMMARY_OUTPUT = REPORT_DIR / "data_summary.csv"
 
 REQUIRED_DOCUMENT_COLUMNS = [
@@ -191,7 +192,7 @@ def build_data_summary(movies: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    FINAL_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
     movies = load_and_validate_documents()

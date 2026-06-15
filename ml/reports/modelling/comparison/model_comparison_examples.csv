@@ -1,0 +1,271 @@
+model,query,source_id,source_title,source_release_year,source_genres,rank,recommended_id,recommended_title,recommended_release_year,recommended_genres,vote_average,vote_count,score,genre_overlap
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,1,434853,Space/Time,2025,science fiction action thriller,6.008,61.0,0.517453433547237,0.3333333333333333
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,2,15493,Star Wreck: In the Pirkinning,2005,science fiction action comedy,6.753,75.0,0.41753653539358987,0.3333333333333333
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,3,3585,Clockmaker,1998,adventure science fiction,4.167,12.0,0.4130477008948667,0.75
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,4,559581,Stowaway,2021,science fiction drama thriller,6.007,675.0,0.40832097777690474,0.6
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,5,18221,Space Station 3D,2002,documentary,6.5,47.0,0.39970543865447916,0.0
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,6,22501,Time Masters,1982,animation science fiction adventure,7.2,184.0,0.3917131009286688,0.6
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,7,77069,Alice's Birthday,2009,animation family science fiction,5.1,11.0,0.390598694400455,0.3333333333333333
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,8,49047,Gravity,2013,science fiction thriller drama,7.169,16359.0,0.38991702964475417,0.6
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,9,32064,The Time Guardian,1987,science fiction,5.011,47.0,0.3837664504007079,0.5
+CountVectorizer + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,10,647582,Time Loop,2020,science fiction,4.854,24.0,0.38237857884125925,0.5
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,1,18221,Space Station 3D,2002,documentary,6.5,47.0,0.3676319995452078,0.0
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,2,434853,Space/Time,2025,science fiction action thriller,6.008,61.0,0.352254288847005,0.3333333333333333
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,3,49047,Gravity,2013,science fiction thriller drama,7.169,16359.0,0.3414074174482172,0.6
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,4,301959,Interstellar: Nolan's Odyssey,2014,documentary tv movie,7.763,186.0,0.3317703442790045,0.0
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,5,753325,The Real Right Stuff,2020,documentary history,6.625,16.0,0.31338764852059575,0.0
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,6,615988,Thomas Pesquet: The Makings of a Hero,2019,documentary,7.3,12.0,0.3129070430278881,0.0
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,7,15493,Star Wreck: In the Pirkinning,2005,science fiction action comedy,6.753,75.0,0.3077104626971058,0.3333333333333333
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,8,559581,Stowaway,2021,science fiction drama thriller,6.007,675.0,0.30412472239952765,0.6
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,9,325263,Journey to Space,2015,documentary,6.2,37.0,0.30262844371183145,0.0
+TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,10,13766,SpaceCamp,1986,family adventure science fiction,5.9,204.0,0.29311982680515264,0.6
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,1,334931,Dreams: Cinema of the Subconscious,2010,documentary,7.1,10.0,0.3562911677636917,0.0
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,2,28920,Dream a Little Dream 2,1995,comedy romance action,4.952,21.0,0.2179757611818948,0.16666666666666666
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,3,41517,Ra.One,2011,adventure action science fiction,5.745,379.0,0.20514213878333143,1.0
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,4,16517,The Can,2007,comedy crime drama,5.547,32.0,0.19556531635945598,0.0
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,5,586742,Dreambuilders,2020,animation adventure family,7.5,178.0,0.19061787281521853,0.16666666666666666
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,6,1050540,Tom Papa: What a Day!,2022,comedy,7.0,10.0,0.18776963343801223,0.0
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,7,758025,Peter's To-Do List,2019,science fiction action adventure,7.0,96.0,0.1876702581288882,1.0
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,8,287018,The Powerpuff Girls: Dance Pantsed,2014,family tv movie animation action comedy science fiction adventure,6.1,17.0,0.18756212198730912,0.4444444444444444
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,9,942766,The Powerpuff Girls Rule!!!,2008,animation action tv movie adventure comedy family fantasy science fiction,7.538,13.0,0.1845443138478802,0.4
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,10,120777,The Secret Number,2012,drama science fiction thriller,6.2,30.0,0.18428853505018536,0.3333333333333333
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,1,334931,Dreams: Cinema of the Subconscious,2010,documentary,7.1,10.0,0.4003939064160022,0.0
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,2,450100,The Holly Kane Experiment,2017,drama thriller,5.0,32.0,0.17607879762190237,0.0
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,3,792166,Leonardo DiCaprio: Most Wanted!,2021,documentary,6.5,21.0,0.16408923447653592,0.0
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,4,163047,Morgan M. Morgansen's Date with Destiny,2010,comedy romance,6.7,12.0,0.15861779592103054,0.0
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,5,24458,The Age of Stupid,2009,war documentary history,6.579,76.0,0.1534563503983501,0.0
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,6,322194,Subconscious,2015,action thriller mystery,3.667,12.0,0.14969536996705374,0.16666666666666666
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,7,49026,The Dark Knight Rises,2012,action crime drama thriller,7.795,24399.0,0.14241208442558073,0.14285714285714285
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,8,36224,Subconscious Cruelty,2001,horror crime,4.731,80.0,0.13776281418535488,0.0
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,9,13501,The Good Night,2007,comedy drama romance fantasy music,5.348,141.0,0.13435397594334655,0.0
+TF-IDF + Cosine,Inception,27205,Inception,2010,action science fiction adventure,10,43629,Doodlebug,1997,horror,6.523,487.0,0.12361013724656411,0.0
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,1,49026,The Dark Knight Rises,2012,action crime drama thriller,7.795,24399.0,0.45988476118543287,0.75
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,2,272,Batman Begins,2005,drama crime action,7.727,22645.0,0.4549973472297033,0.5
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,3,268,Batman,1989,fantasy action crime,7.2,8583.0,0.4171579241671042,0.5
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,4,14919,Batman: Mask of the Phantasm,1993,animation crime mystery,7.496,1247.0,0.3539314881494288,0.2
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,5,364,Batman Returns,1992,action fantasy,6.946,7099.0,0.33643470882179133,0.25
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,6,23381,Pokiri,2006,action thriller crime,7.5,70.0,0.32840619190534265,1.0
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,7,414906,The Batman,2022,crime mystery thriller,7.7,11975.0,0.30969005213075024,0.5
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,8,23483,Kick-Ass,2010,action crime,7.125,12391.0,0.29334351904902756,0.6666666666666666
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,9,40662,Batman: Under the Red Hood,2010,mystery crime animation,7.757,1728.0,0.2899717804431689,0.2
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,10,414,Batman Forever,1995,action crime fantasy,5.456,5591.0,0.2885375540978175,0.5
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,1,272,Batman Begins,2005,drama crime action,7.727,22645.0,0.39192618570148563,0.5
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,2,49026,The Dark Knight Rises,2012,action crime drama thriller,7.795,24399.0,0.357485312419974,0.75
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,3,268,Batman,1989,fantasy action crime,7.2,8583.0,0.27557413988419244,0.5
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,4,14919,Batman: Mask of the Phantasm,1993,animation crime mystery,7.496,1247.0,0.274057339007225,0.2
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,5,364,Batman Returns,1992,action fantasy,6.946,7099.0,0.2523144209912262,0.25
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,6,29751,Batman Unmasked: The Psychology of The Dark Knight,2008,documentary,7.463,54.0,0.23816882248799157,0.0
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,7,414,Batman Forever,1995,action crime fantasy,5.456,5591.0,0.22958310057456935,0.5
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,8,403333,DC Super Hero Girls: Super Hero High,2016,action adventure animation family tv movie,5.8,20.0,0.22447872778721636,0.125
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,9,64202,Batman Beyond: The Movie,1999,animation action science fiction,7.2,203.0,0.22066426452144666,0.16666666666666666
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,10,40662,Batman: Under the Red Hood,2010,mystery crime animation,7.757,1728.0,0.20816289055673423,0.2
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,1,59709,Britannic,2000,action drama history tv movie war,6.833,78.0,0.435544607590888,0.14285714285714285
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,2,213362,Reflections on Titanic,2012,documentary,7.2,29.0,0.346595242244248,0.0
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,3,1457124,Titanic: The Digital Resurrection,2025,documentary tv movie,7.9,37.0,0.33156409557205435,0.0
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,4,554908,"Endings, Beginnings",2020,romance drama,6.1,261.0,0.3233620752487889,1.0
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,5,47547,Bangkok Love Story,2007,drama action romance,5.2,20.0,0.32231469180483746,0.6666666666666666
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,6,672125,Love Mocktail,2020,romance drama,6.632,19.0,0.29956108621624955,1.0
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,7,428950,Drain the Titanic,2015,documentary history tv movie,7.2,25.0,0.28761891916696136,0.0
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,8,11036,The Notebook,2004,romance drama,7.888,12564.0,0.2869389765722584,1.0
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,9,469109,Plug Love,2017,crime romance drama,7.6,11.0,0.28647830877688707,0.6666666666666666
+CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,10,365952,The Third Way of Love,2015,romance drama,6.6,22.0,0.28053721993933867,1.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,1,213362,Reflections on Titanic,2012,documentary,7.2,29.0,0.462769618458184,0.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,2,1457124,Titanic: The Digital Resurrection,2025,documentary tv movie,7.9,37.0,0.40561883087950773,0.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,3,59709,Britannic,2000,action drama history tv movie war,6.833,78.0,0.3831650946386423,0.14285714285714285
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,4,428950,Drain the Titanic,2015,documentary history tv movie,7.2,25.0,0.3582237046367337,0.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,5,682666,Back to the Titanic,2020,documentary,6.5,16.0,0.35557960338301114,0.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,6,45929,Titanica,1992,documentary,6.1,10.0,0.35469615048885117,0.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,7,777797,Titanic: Into the Heart of the Wreck,2020,documentary,7.3,13.0,0.3368146490334984,0.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,8,102041,Titanic: The Final Word with James Cameron,2012,documentary history tv movie,7.379,29.0,0.32759282442654164,0.0
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,9,86938,S.O.S. Titanic,1980,history drama thriller tv movie,6.0,42.0,0.32168003978104365,0.16666666666666666
+TF-IDF + Cosine,Titanic,597,Titanic,1997,drama romance,10,71235,Titanic: The Legend Goes On...,2000,animation family,2.813,75.0,0.3095797887331725,0.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,1,863,Toy Story 2,1999,animation comedy family,7.608,14918.0,0.6194003658060994,0.75
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,2,10193,Toy Story 3,2010,animation family comedy,7.807,15750.0,0.5154993545251402,0.75
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,3,301528,Toy Story 4,2019,family comedy animation adventure,7.5,10551.0,0.5143582920047161,1.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,4,594530,Lamp Life,2020,adventure animation comedy family,7.1,328.0,0.47745269176085825,1.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,5,464729,The Story Behind 'Toy Story',1996,documentary,7.786,21.0,0.4383038494826663,0.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,6,213121,Toy Story of Terror!,2013,adventure animation comedy family,7.209,1011.0,0.3945788260366792,1.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,7,406122,Toy Story at 20: To Infinity and Beyond,2015,documentary,7.1,15.0,0.3743969023584085,0.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,8,256835,Toy Story That Time Forgot,2014,animation family adventure comedy,7.0,1064.0,0.3541989822967483,1.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,9,1059264,The Inseparables,2023,animation adventure comedy family,6.5,59.0,0.32823269898959945,1.0
+CountVectorizer + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,10,865498,The New Toy,2022,comedy family drama,5.9,178.0,0.32518321808846584,0.4
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,1,863,Toy Story 2,1999,animation comedy family,7.608,14918.0,0.5778519366506814,0.75
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,2,10193,Toy Story 3,2010,animation family comedy,7.807,15750.0,0.48572918833035233,0.75
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,3,464729,The Story Behind 'Toy Story',1996,documentary,7.786,21.0,0.46446731162157745,0.0
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,4,301528,Toy Story 4,2019,family comedy animation adventure,7.5,10551.0,0.43163688281436435,1.0
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,5,594530,Lamp Life,2020,adventure animation comedy family,7.1,328.0,0.4258541403662226,1.0
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,6,213121,Toy Story of Terror!,2013,adventure animation comedy family,7.209,1011.0,0.3664389969610279,1.0
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,7,406122,Toy Story at 20: To Infinity and Beyond,2015,documentary,7.1,15.0,0.3499104756339469,0.0
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,8,11551,Small Soldiers,1998,comedy adventure fantasy science fiction action,6.559,2325.0,0.33498138795249355,0.25
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,9,865498,The New Toy,2022,comedy family drama,5.9,178.0,0.3238878147176128,0.4
+TF-IDF + Cosine,Toy Story,862,Toy Story,1995,family comedy animation adventure,10,11597,Toys,1992,fantasy comedy science fiction,5.3,584.0,0.3170883480999309,0.14285714285714285
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,1,275030,Anantaram,1987,drama,8.167,12.0,0.30331165698669793,1.0
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,2,121046,Eternity,2010,drama romance,6.2,10.0,0.2553441154284755,0.5
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,3,1123391,Closed For Maintenance,2017,drama,6.0,15.0,0.25,1.0
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,4,47547,Bangkok Love Story,2007,drama action romance,5.2,20.0,0.2347869083534997,0.3333333333333333
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,5,1136573,Man,2022,drama,6.9,31.0,0.23333333333333334,1.0
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,6,290717,Forbidden Homework,1992,drama,4.538,13.0,0.2328335661670159,1.0
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,7,42092,The Home and the World,1985,drama,7.286,28.0,0.227578809855708,1.0
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,8,366104,A Decent Man,2016,drama,5.8,43.0,0.2253744679276044,1.0
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,9,78556,The Pastor's Wife,2011,crime drama tv movie,6.2,16.0,0.21852076045841218,0.25
+CountVectorizer + Cosine,Avatar,1096978,Avatar,2006,drama,10,942826,Hello?,2022,drama,6.3,17.0,0.21629522817435007,1.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,1,287003,Avatar: Scene Deconstruction,2009,documentary,6.548,52.0,0.33975210628129665,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,2,981616,Gal Avatar,2010,science fiction,4.5,18.0,0.25157402745845164,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,3,829860,Hunan: The Other World of Avatar,2015,documentary,4.9,18.0,0.2225007994070938,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,4,668297,The Last Avatar,2014,adventure drama fantasy,4.625,12.0,0.22087952611598768,0.3333333333333333
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,5,183392,Capturing Avatar,2010,documentary,6.95,110.0,0.21167021449532245,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,6,370464,The Masked Saint,2016,crime action,5.589,90.0,0.20223052798516009,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,7,1584628,Borrón y Vida Nueva,2025,comedy,8.0,11.0,0.18647891318748255,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,8,111332,Avatar: Creating the World of Pandora,2010,documentary,6.455,177.0,0.17760324257966015,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,9,278698,Avatar Spirits,2010,documentary,8.012,41.0,0.17382490613971147,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,10,613200,The King's Avatar: For the Glory,2019,animation action drama,6.4,73.0,0.15881833838045764,0.3333333333333333
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,1,52244,Larva,2005,horror tv movie science fiction,4.957,35.0,0.2699894642014264,0.6
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,2,931349,Ash,2025,horror science fiction thriller,5.155,445.0,0.2433106228672706,0.75
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,3,1207413,Dark Parasite,2023,horror science fiction,5.8,14.0,0.23029390744115344,1.0
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,4,321668,Strange Blood,2015,science fiction horror,3.5,48.0,0.22205779584216376,1.0
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,5,138792,Mold!,2012,horror science fiction comedy,5.5,10.0,0.21757131728816848,0.75
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,6,99062,Choker,2005,horror action science fiction,3.7,10.0,0.2172620473133704,0.75
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,7,1151703,Island Escape,2023,horror action science fiction,4.579,19.0,0.21723056325400625,0.75
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,8,103217,Midnight Movie Massacre,1988,mystery science fiction comedy horror,4.1,10.0,0.21646968328659952,0.6
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,9,258157,Programmed to Kill,1987,horror action science fiction,3.7,15.0,0.21563459333224208,0.75
+CountVectorizer + Cosine,Parasite,48311,Parasite,1982,horror science fiction,10,520788,Dystopia,2018,science fiction,5.2,57.0,0.21483446221182986,0.6666666666666666
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,1,931349,Ash,2025,horror science fiction thriller,5.155,445.0,0.21232948693517653,0.75
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,2,52244,Larva,2005,horror tv movie science fiction,4.957,35.0,0.20719788968903333,0.6
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,3,85198,Frightmare,1983,horror comedy,4.6,49.0,0.20531845954663036,0.25
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,4,1207413,Dark Parasite,2023,horror science fiction,5.8,14.0,0.18910284930225466,1.0
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,5,260015,The Parasite Doctor Suzune: Genesis,2011,thriller science fiction,3.5,11.0,0.1881909655641418,0.5
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,6,143678,David Blaine: Street Magic,1997,tv movie documentary,7.111,27.0,0.18739400995497785,0.0
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,7,754218,C.A.M.,2021,horror thriller,5.6,13.0,0.1835271074581826,0.25
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,8,83414,The Granny,1995,horror comedy,6.2,24.0,0.17930720674869777,0.25
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,9,41452,Wavelength,1983,science fiction,5.912,34.0,0.15395140909626223,0.6666666666666666
+TF-IDF + Cosine,Parasite,48311,Parasite,1982,horror science fiction,10,418985,Pete Davidson: SMD,2016,comedy,6.906,16.0,0.14824845891730554,0.0
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,1,1047508,La mejor Navidad,2022,comedy romance tv movie,6.0,14.0,0.24658122915665154,0.4
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,2,105789,Going Down in La-La Land,2011,drama comedy romance,5.7,52.0,0.24273333089760094,1.0
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,3,2976,Hairspray,2007,comedy romance drama,6.665,2626.0,0.23380813685417742,1.0
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,4,890559,Haroun,2021,comedy,6.2,20.0,0.22185786352129308,0.3333333333333333
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,5,1028938,A Hollywood Christmas,2022,comedy romance,6.031,64.0,0.21906676162177272,0.6666666666666666
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,6,12178,Miss Pettigrew Lives for a Day,2008,drama comedy romance,6.784,417.0,0.2174700439362031,1.0
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,7,44376,"Hollywood, je t'aime",2009,drama romance comedy,5.0,14.0,0.2152429709814003,1.0
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,8,460162,La barbichette,2002,comedy,7.417,12.0,0.21459601138459367,0.3333333333333333
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,9,520594,John Mulaney: Kid Gorgeous at Radio City,2018,comedy tv movie,7.902,244.0,0.21343665113881324,0.2
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,10,2148,The Cotton Club,1984,crime drama,6.515,442.0,0.21231171244918418,0.25
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,1,2148,The Cotton Club,1984,crime drama,6.515,442.0,0.2285551167141368,0.25
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,2,82144,Sun Ra: A Joyful Noise,1980,documentary music,6.409,11.0,0.20195583078589352,0.0
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,3,11394,Jazzclub - Der frühe Vogel fängt den Wurm,2004,comedy,5.8,23.0,0.2001857907517778,0.3333333333333333
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,4,103016,Ornette: Made in America,1986,documentary music,6.5,12.0,0.19889259626153463,0.0
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,5,14670,'Round Midnight,1986,drama music,7.1,104.0,0.18631390793499805,0.25
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,6,411012,Chasing Trane,2017,documentary music,7.265,66.0,0.18360194990532092,0.0
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,7,12178,Miss Pettigrew Lives for a Day,2008,drama comedy romance,6.784,417.0,0.18217513094802126,1.0
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,8,535954,Ryan Gosling: Hollywood's Demigod,2018,documentary tv movie,7.0,11.0,0.17793394434067392,0.0
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,9,254194,Starry Eyes,2014,horror fantasy mystery,6.068,505.0,0.1675124765642285,0.0
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,10,9684,Sweet and Lowdown,1999,comedy drama music,6.8,559.0,0.1673743078751207,0.5
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,1,683127,Earwig and the Witch,2021,animation fantasy family comedy,5.9,297.0,0.27592072480480984,0.75
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,2,100271,A Letter to Momo,2012,comedy fantasy animation drama family,7.336,405.0,0.25222059780532535,0.6
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,3,568124,Encanto,2021,animation comedy family fantasy,7.57,10215.0,0.2408823295204358,0.75
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,4,688900,Sol Levante,2020,animation action science fiction fantasy,4.688,64.0,0.2367785320221084,0.3333333333333333
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,5,277833,Rappakal,2005,drama family,6.737,19.0,0.23651952169989152,0.25
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,6,52795,Doraemon: Nobita's New Great Adventure Into the Underworld - The Seven Magic Users,2007,family adventure animation science fiction fantasy,7.244,90.0,0.23549302621278106,0.5
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,7,315465,The Boy and the Beast,2015,action adventure animation drama family fantasy,7.908,1606.0,0.23280381982995835,0.5
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,8,21481,Twitches,2005,comedy drama family fantasy tv movie,6.746,544.0,0.22841609628806428,0.2857142857142857
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,9,51739,The Secret World of Arrietty,2010,fantasy animation family,7.67,3175.0,0.22655045777254926,1.0
+CountVectorizer + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,10,408355,Throne of Elves,2016,fantasy animation family,7.601,217.0,0.225375940111785,1.0
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,1,222661,The Day I Bought a Star,2006,animation fantasy science fiction,7.8,14.0,0.290208007292589,0.4
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,2,4935,Howl's Moving Castle,2004,fantasy animation adventure,8.388,11107.0,0.22528112008164283,0.5
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,3,77194,The Boy Who Saw the Wind,2000,adventure family animation fantasy,6.9,10.0,0.1956720269902952,0.75
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,4,54074,Kitaro,2007,fantasy action science fiction,5.464,14.0,0.17148374630503585,0.16666666666666666
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,5,51739,The Secret World of Arrietty,2010,fantasy animation family,7.67,3175.0,0.17030940076848478,1.0
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,6,42000,The Great Yokai War,2005,comedy fantasy action,6.329,76.0,0.16662514835202244,0.2
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,7,125132,Yakuza Ladies,1986,drama crime,5.5,12.0,0.16395656948965193,0.0
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,8,430447,Mary and The Witch's Flower,2017,animation adventure family fantasy,7.15,908.0,0.16135728486521198,0.75
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,9,28874,Summer Wars,2009,animation science fiction,7.456,1034.0,0.16108046238618795,0.2
+TF-IDF + Cosine,Spirited Away,129,Spirited Away,2001,animation family fantasy,10,773621,Natsume's Book of Friends: The Waking Rock and the Strange Visitor,2021,animation drama fantasy,7.0,20.0,0.15784866427263125,0.5
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,1,286217,The Martian,2015,science fiction drama adventure,7.7,21253.0,0.9460315,1.0
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,2,687163,Project Hail Mary,2026,science fiction adventure,8.671,4888.0,0.93543583,0.75
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,3,329865,Arrival,2016,drama science fiction mystery,7.626,19383.0,0.91860884,0.6
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,4,13475,Star Trek,2009,science fiction action adventure,7.431,10500.0,0.92261237,0.6
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,5,274870,Passengers,2016,drama romance science fiction,6.955,14243.0,0.91025376,0.6
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,6,95,Armageddon,1998,action science fiction adventure,6.835,8589.0,0.9261312,0.6
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,7,601,E.T. the Extra-Terrestrial,1982,drama family fantasy science fiction,7.5,12016.0,0.89900607,0.5
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,8,49047,Gravity,2013,science fiction thriller drama,7.169,16359.0,0.8914448,0.6
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,9,75,Mars Attacks!,1996,comedy fantasy science fiction,6.423,5884.0,0.9219886,0.3333333333333333
+Word2Vec + Qdrant,Interstellar,157336,Interstellar,2014,adventure drama science fiction,10,686,Contact,1997,drama science fiction mystery,7.444,5004.0,0.9015026,0.6
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,1,1124,The Prestige,2006,drama mystery science fiction,8.208,17617.0,0.8392017,0.3333333333333333
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,2,37165,The Truman Show,1998,comedy drama,8.154,20267.0,0.8154166,0.0
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,3,131634,The Hunger Games: Mockingjay - Part 2,2015,action adventure science fiction,6.9,13350.0,0.85448706,1.0
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,4,101299,The Hunger Games: Catching Fire,2013,adventure action science fiction,7.427,18459.0,0.8269808,1.0
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,5,131631,The Hunger Games: Mockingjay - Part 1,2014,science fiction adventure thriller,6.8,16740.0,0.8374109,0.6
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,6,1635,The Island,2005,action thriller science fiction,6.697,5884.0,0.8661348,0.6
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,7,339988,The Circle,2017,drama thriller science fiction,5.523,4589.0,0.8851342,0.3333333333333333
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,8,49530,In Time,2011,action thriller science fiction,6.971,12172.0,0.84096295,0.6
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,9,51876,Limitless,2011,thriller mystery science fiction,7.202,11493.0,0.82839847,0.3333333333333333
+Word2Vec + Qdrant,Inception,27205,Inception,2010,action science fiction adventure,10,9620,Paycheck,2003,action adventure mystery science fiction thriller,6.22,2039.0,0.869462,0.6666666666666666
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,1,49026,The Dark Knight Rises,2012,action crime drama thriller,7.795,24399.0,0.9510254,0.75
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,2,272,Batman Begins,2005,drama crime action,7.727,22645.0,0.9280948,0.5
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,3,268,Batman,1989,fantasy action crime,7.2,8583.0,0.9467982,0.5
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,4,414906,The Batman,2022,crime mystery thriller,7.7,11975.0,0.91624945,0.5
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,5,364,Batman Returns,1992,action fantasy,6.946,7099.0,0.9154409,0.25
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,6,495764,Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn),2020,action crime,6.877,10820.0,0.9015551,0.6666666666666666
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,7,752,V for Vendetta,2006,action thriller science fiction,7.901,15579.0,0.8689959,0.4
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,8,22803,Law Abiding Citizen,2009,drama crime thriller,7.394,5682.0,0.89670515,0.5
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,9,14919,Batman: Mask of the Phantasm,1993,animation crime mystery,7.496,1247.0,0.9002696,0.2
+Word2Vec + Qdrant,The Dark Knight,155,The Dark Knight,2008,action crime thriller,10,23483,Kick-Ass,2010,action crime,7.125,12391.0,0.8715099,0.6666666666666666
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,1,59709,Britannic,2000,action drama history tv movie war,6.833,78.0,0.8973998,0.1428571428571428
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,2,11036,The Notebook,2004,romance drama,7.888,12564.0,0.82763624,1.0
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,3,4922,The Curious Case of Benjamin Button,2008,drama fantasy romance,7.6,13740.0,0.8268054,0.6666666666666666
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,4,8358,Cast Away,2000,adventure drama,7.662,12281.0,0.8202063,0.3333333333333333
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,5,363676,Sully,2016,drama history,7.204,7726.0,0.8342587,0.3333333333333333
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,6,205775,In the Heart of the Sea,2015,thriller drama adventure action history,6.8,4356.0,0.84506285,0.1666666666666666
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,7,2133,The Perfect Storm,2000,drama adventure action,6.5,2562.0,0.85106003,0.25
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,8,52886,Castaway,1986,adventure romance drama,6.3,122.0,0.8560762,0.6666666666666666
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,9,429300,Adrift,2018,thriller romance adventure,6.841,2699.0,0.8395798,0.25
+Word2Vec + Qdrant,Titanic,597,Titanic,1997,drama romance,10,8619,Master and Commander: The Far Side of the World,2003,adventure drama war,7.198,3532.0,0.82909524,0.25
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,1,10193,Toy Story 3,2010,animation family comedy,7.807,15750.0,0.93864965,0.75
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,2,585,"Monsters, Inc.",2001,animation comedy family fantasy,7.851,19808.0,0.91070324,0.6
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,3,863,Toy Story 2,1999,animation comedy family,7.608,14918.0,0.9277019,0.75
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,4,301528,Toy Story 4,2019,family comedy animation adventure,7.5,10551.0,0.92736816,1.0
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,5,150540,Inside Out,2015,animation family adventure drama comedy,7.909,23485.0,0.87870646,0.8
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,6,1226863,The Super Mario Galaxy Movie,2026,family comedy adventure fantasy animation,8.166,2517.0,0.8729142,0.8
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,7,82690,Wreck-It Ralph,2012,family animation comedy adventure,7.357,13081.0,0.8789214,1.0
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,8,14836,Coraline,2009,animation family fantasy,7.911,9008.0,0.86864185,0.4
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,9,1022789,Inside Out 2,2024,animation adventure comedy family,7.546,6706.0,0.8732007,1.0
+Word2Vec + Qdrant,Toy Story,862,Toy Story,1995,family comedy animation adventure,10,420821,Chip 'n Dale: Rescue Rangers,2022,animation family comedy adventure mystery,6.989,1373.0,0.8959844,0.8
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,1,8088,Broken Embraces,2009,drama romance thriller,7.154,715.0,0.89896935,0.3333333333333333
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,2,20941,Innocent Voices,2005,drama war,8.165,522.0,0.88365424,0.5
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,3,56810,The Blind Sunflowers,2008,drama,6.5,70.0,0.90824646,1.0
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,4,80184,The Hidden Face,2011,thriller mystery,7.303,1142.0,0.8888414,0.0
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,5,1407635,The Good Manners,2025,drama,6.5,20.0,0.899864,1.0
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,6,80713,Alone,1999,drama,7.019,54.0,0.89054084,1.0
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,7,517331,The Realm,2018,thriller mystery drama,7.1,474.0,0.88768077,0.3333333333333333
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,8,331110,Sicarivs: The Night and the Silence,2015,drama crime thriller,7.2,28.0,0.8854494,0.3333333333333333
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,9,189362,Sunday Light,2007,drama romance thriller,6.0,10.0,0.9026129,0.3333333333333333
+Word2Vec + Qdrant,Avatar,1096978,Avatar,2006,drama,10,768566,The Day I Lost Myself,2020,drama thriller,7.5,16.0,0.8809915,0.5
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,1,26889,The Brother from Another Planet,1984,comedy science fiction drama,6.658,98.0,0.89969826,0.4
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,2,11683,Land of the Dead,2005,horror science fiction thriller,6.264,1801.0,0.8957772,0.75
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,3,40221,The Borrower,1991,science fiction comedy horror,5.0,60.0,0.9178598,0.75
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,4,92562,Metamorphosis: The Alien Factor,1990,horror science fiction,6.1,41.0,0.8990623,1.0
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,5,55792,Simon,1980,comedy science fiction,6.333,24.0,0.8949791,0.5
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,6,30921,Scanner Cop,1994,science fiction horror action,5.741,79.0,0.88244605,0.75
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,7,15158,Phantasm II,1988,action horror science fiction thriller,6.211,394.0,0.87360966,0.6
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,8,170885,Annihilator,1986,science fiction horror tv movie,5.25,12.0,0.8880398,0.6
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,9,77195,Neon City,1991,science fiction adventure action,4.895,38.0,0.89998996,0.4
+Word2Vec + Qdrant,Parasite,48311,Parasite,1982,horror science fiction,10,78242,Peacemaker,1990,science fiction action,5.107,14.0,0.88597184,0.5
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,1,42297,Burlesque,2010,drama romance,7.213,2379.0,0.9184487,0.6666666666666666
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,2,332562,A Star Is Born,2018,music drama romance,7.493,12242.0,0.8781662,0.5
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,3,194662,Birdman or (The Unexpected Virtue of Ignorance),2014,drama comedy,7.441,13594.0,0.86451936,0.6666666666666666
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,4,786,Almost Famous,2000,drama music,7.5,3104.0,0.8924538,0.25
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,5,22538,Scott Pilgrim vs. the World,2010,action comedy romance,7.486,8608.0,0.8693255,0.5
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,6,114,Pretty Woman,1990,romance comedy,7.4,8996.0,0.8666575,0.6666666666666666
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,7,243,High Fidelity,2000,drama comedy romance music,7.1,2194.0,0.88595617,0.75
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,8,4995,Boogie Nights,1997,drama comedy,7.6,3573.0,0.86625826,0.6666666666666666
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,9,615777,Babylon,2022,drama comedy,7.349,3784.0,0.8663448,0.6666666666666666
+Word2Vec + Qdrant,La La Land,313369,La La Land,2016,comedy drama romance,10,86829,Inside Llewyn Davis,2013,drama music,7.182,2931.0,0.8720542,0.25
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,1,4935,Howl's Moving Castle,2004,fantasy animation adventure,8.388,11107.0,0.9471463,0.5
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,2,8392,My Neighbor Totoro,1988,fantasy animation family,8.064,8826.0,0.94116837,1.0
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,3,51739,The Secret World of Arrietty,2010,fantasy animation family,7.67,3175.0,0.9615929,1.0
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,4,1359607,Miss Kobayashi's Dragon Maid: A lonely dragon wants to be loved,2025,animation comedy fantasy,8.522,46.0,0.9530922,0.5
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,5,648457,DEEMO Memorial Keys,2022,animation drama romance mystery fantasy,7.5,18.0,0.9611633,0.3333333333333333
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,6,810693,Jujutsu Kaisen 0,2021,animation action fantasy,8.104,1758.0,0.94502455,0.5
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,7,942881,Lonely Castle in the Mirror,2022,animation drama mystery fantasy,7.1,106.0,0.96373177,0.4
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,8,92321,Hotarubi no Mori e,2011,romance animation fantasy,8.257,1218.0,0.94192606,0.5
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,9,916224,Suzume,2022,animation drama adventure fantasy,7.886,1745.0,0.94370866,0.4
+Word2Vec + Qdrant,Spirited Away,129,Spirited Away,2001,animation family fantasy,10,492136,Destiny: The Tale of Kamakura,2017,mystery drama fantasy,7.421,38.0,0.9545947,0.2

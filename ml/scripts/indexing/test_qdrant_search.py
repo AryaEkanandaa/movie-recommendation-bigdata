@@ -17,8 +17,9 @@ import requests
 
 
 ML_DIR = Path(__file__).resolve().parents[2]
-VECTOR_PATH = ML_DIR / "data" / "processed" / "movie_vectors_word2vec.parquet"
-PAYLOAD_PATH = ML_DIR / "data" / "processed" / "movies_payload.csv"
+PROCESSED_DIR = ML_DIR / "data" / "processed"
+VECTOR_PATH = PROCESSED_DIR / "vectors" / "movie_vectors_word2vec.parquet"
+PAYLOAD_PATH = PROCESSED_DIR / "final" / "movies_payload.csv"
 
 QDRANT_HOST = os.getenv("QDRANT_HOST", "qdrant")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", "6333"))

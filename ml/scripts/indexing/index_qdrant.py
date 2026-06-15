@@ -2,8 +2,8 @@
 Index Word2Vec movie vectors into Qdrant.
 
 Inputs:
-- ml/data/processed/movie_vectors_word2vec.parquet
-- ml/data/processed/movies_payload.csv
+- ml/data/processed/vectors/movie_vectors_word2vec.parquet
+- ml/data/processed/final/movies_payload.csv
 
 Target:
 - Qdrant collection: movies
@@ -22,9 +22,11 @@ import requests
 
 ML_DIR = Path(__file__).resolve().parents[2]
 PROCESSED_DIR = ML_DIR / "data" / "processed"
+FINAL_DIR = PROCESSED_DIR / "final"
+VECTOR_DIR = PROCESSED_DIR / "vectors"
 
-VECTOR_PATH = PROCESSED_DIR / "movie_vectors_word2vec.parquet"
-PAYLOAD_PATH = PROCESSED_DIR / "movies_payload.csv"
+VECTOR_PATH = VECTOR_DIR / "movie_vectors_word2vec.parquet"
+PAYLOAD_PATH = FINAL_DIR / "movies_payload.csv"
 
 QDRANT_HOST = os.getenv("QDRANT_HOST", "qdrant")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", "6333"))

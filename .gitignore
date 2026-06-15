@@ -12,7 +12,9 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Generated ML data and logs
-ml/data/
+ml/data/**
+!ml/data/**/
+!ml/data/**/README.md
 ml/logs/
 ml/models/
 models/

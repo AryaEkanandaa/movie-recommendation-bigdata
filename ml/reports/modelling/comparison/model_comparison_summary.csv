@@ -1,0 +1,4 @@
+model,recommendation_count,avg_score,avg_genre_overlap,avg_vote_average,avg_vote_count
+CountVectorizer + Cosine,90,0.2951,0.5928,6.4357,2137.5
+Word2Vec + Qdrant,90,0.8921,0.5671,7.1796,7034.0
+TF-IDF + Cosine,90,0.2566,0.2589,6.508,2003.7333
