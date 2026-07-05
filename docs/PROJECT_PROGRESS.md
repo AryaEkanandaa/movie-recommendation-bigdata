@@ -49,20 +49,20 @@ Status:
 
 | Task | Status | Bukti | Catatan |
 | --- | --- | --- | --- |
-| FastAPI setup | Not started | Belum ada folder `app/backend` | Masih perlu dibuat. |
-| Endpoint `/health` | Not started | Belum ada | Masih perlu dibuat. |
-| Endpoint `/movies/search` | Not started | Belum ada | Masih perlu dibuat. |
-| Endpoint `/recommend/similar` | Not started | Belum ada | Masih perlu dibuat. |
-| Endpoint `/chat` | Not started | Belum ada | Masih perlu dibuat. |
+| FastAPI setup | Done | `backend/app/main.py`, `backend/Dockerfile` | Backend berjalan sebagai Docker Compose service. |
+| Endpoint `/health` | Done | `backend/app/main.py` | Memeriksa koneksi backend ke Qdrant. |
+| Endpoint `/movies/search` | Done | `backend/app/main.py` | Mencari kandidat judul dari payload lokal. |
+| Endpoint `/recommend/similar` | Done | `backend/app/main.py` | Mengambil kandidat Qdrant dan menerapkan hybrid re-ranking. |
+| Endpoint `/chat` | Done | `backend/app/main.py`, `backend/app/llm_service.py` | OpenAI memahami intent dan membuat penjelasan; fallback pola tetap tersedia tanpa key. |
 
 ## Frontend
 
 | Task | Status | Bukti | Catatan |
 | --- | --- | --- | --- |
-| Streamlit setup | Not started | Belum ada folder `app/frontend` | Masih perlu dibuat. |
-| Chat input | Not started | Belum ada | Masih perlu dibuat. |
-| Recommendation card | Not started | Belum ada | Masih perlu dibuat. |
-| Loading/error state | Not started | Belum ada | Masih perlu dibuat. |
+| React frontend setup | Done | `frontend/`, `frontend/Dockerfile` | React + Vite dibuild dan disajikan oleh Nginx. |
+| Chat input | Done | `frontend/src/App.jsx` | Input natural language terhubung ke endpoint `/chat`. |
+| Recommendation card | Done | `frontend/src/App.jsx` | Menampilkan poster, metadata, rating, dan content match. |
+| Loading/error state | Done | `frontend/src/App.jsx` | Memiliki loading skeleton, offline state, empty state, dan error feedback. |
 
 ## Documentation
 
@@ -95,11 +95,7 @@ Bagian ini sudah ada dan cukup dilanjutkan/dirapikan:
 
 Urutan kerja paling aman dari kondisi sekarang:
 
-1. Buat FastAPI backend:
-   - `/health`
-   - `/movies/search`
-   - `/recommend/similar`
-2. Pindahkan logic search/recommendation dari script smoke test ke backend.
-3. Tambahkan hybrid re-ranking di backend.
-4. Buat Streamlit chatbot.
-5. Buat dokumentasi evaluasi model dan demo script.
+1. Uji frontend dan backend bersama di Docker.
+2. Buat dokumentasi arsitektur dan demo script.
+3. Uji OpenAI intent parsing dan explanation menggunakan API key baru.
+4. Validasi intent kompleks untuk aktor, sutradara, keyword, bahasa, rating, tahun, dan durasi.

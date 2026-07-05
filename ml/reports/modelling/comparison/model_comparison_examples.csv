@@ -20,7 +20,7 @@ TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fi
 TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,9,325263,Journey to Space,2015,documentary,6.2,37.0,0.30262844371183145,0.0
 TF-IDF + Cosine,Interstellar,157336,Interstellar,2014,adventure drama science fiction,10,13766,SpaceCamp,1986,family adventure science fiction,5.9,204.0,0.29311982680515264,0.6
 CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,1,334931,Dreams: Cinema of the Subconscious,2010,documentary,7.1,10.0,0.3562911677636917,0.0
-CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,2,28920,Dream a Little Dream 2,1995,comedy romance action,4.952,21.0,0.2179757611818948,0.16666666666666666
+CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,2,28920,Dream a Little Dream 2,1995,comedy romance action,4.952,21.0,0.21870114009589728,0.16666666666666666
 CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,3,41517,Ra.One,2011,adventure action science fiction,5.745,379.0,0.20514213878333143,1.0
 CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,4,16517,The Can,2007,comedy crime drama,5.547,32.0,0.19556531635945598,0.0
 CountVectorizer + Cosine,Inception,27205,Inception,2010,action science fiction adventure,5,586742,Dreambuilders,2020,animation adventure family,7.5,178.0,0.19061787281521853,0.16666666666666666
@@ -45,19 +45,19 @@ CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime t
 CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,4,14919,Batman: Mask of the Phantasm,1993,animation crime mystery,7.496,1247.0,0.3539314881494288,0.2
 CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,5,364,Batman Returns,1992,action fantasy,6.946,7099.0,0.33643470882179133,0.25
 CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,6,23381,Pokiri,2006,action thriller crime,7.5,70.0,0.32840619190534265,1.0
-CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,7,414906,The Batman,2022,crime mystery thriller,7.7,11975.0,0.30969005213075024,0.5
+CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,7,414906,The Batman,2022,crime mystery thriller,7.7,11975.0,0.311631701572679,0.5
 CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,8,23483,Kick-Ass,2010,action crime,7.125,12391.0,0.29334351904902756,0.6666666666666666
 CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,9,40662,Batman: Under the Red Hood,2010,mystery crime animation,7.757,1728.0,0.2899717804431689,0.2
 CountVectorizer + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,10,414,Batman Forever,1995,action crime fantasy,5.456,5591.0,0.2885375540978175,0.5
-TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,1,272,Batman Begins,2005,drama crime action,7.727,22645.0,0.39192618570148563,0.5
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,1,272,Batman Begins,2005,drama crime action,7.727,22645.0,0.3919261857014857,0.5
 TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,2,49026,The Dark Knight Rises,2012,action crime drama thriller,7.795,24399.0,0.357485312419974,0.75
-TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,3,268,Batman,1989,fantasy action crime,7.2,8583.0,0.27557413988419244,0.5
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,3,268,Batman,1989,fantasy action crime,7.2,8583.0,0.2755741398841925,0.5
 TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,4,14919,Batman: Mask of the Phantasm,1993,animation crime mystery,7.496,1247.0,0.274057339007225,0.2
 TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,5,364,Batman Returns,1992,action fantasy,6.946,7099.0,0.2523144209912262,0.25
 TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,6,29751,Batman Unmasked: The Psychology of The Dark Knight,2008,documentary,7.463,54.0,0.23816882248799157,0.0
 TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,7,414,Batman Forever,1995,action crime fantasy,5.456,5591.0,0.22958310057456935,0.5
 TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,8,403333,DC Super Hero Girls: Super Hero High,2016,action adventure animation family tv movie,5.8,20.0,0.22447872778721636,0.125
-TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,9,64202,Batman Beyond: The Movie,1999,animation action science fiction,7.2,203.0,0.22066426452144666,0.16666666666666666
+TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,9,64202,Batman Beyond: The Movie,1999,animation action science fiction,7.2,203.0,0.2206642645214466,0.16666666666666666
 TF-IDF + Cosine,The Dark Knight,155,The Dark Knight,2008,action crime thriller,10,40662,Batman: Under the Red Hood,2010,mystery crime animation,7.757,1728.0,0.20816289055673423,0.2
 CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,1,59709,Britannic,2000,action drama history tv movie war,6.833,78.0,0.435544607590888,0.14285714285714285
 CountVectorizer + Cosine,Titanic,597,Titanic,1997,drama romance,2,213362,Reflections on Titanic,2012,documentary,7.2,29.0,0.346595242244248,0.0
@@ -115,7 +115,7 @@ TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,3,829860,Hunan: The Other World
 TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,4,668297,The Last Avatar,2014,adventure drama fantasy,4.625,12.0,0.22087952611598768,0.3333333333333333
 TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,5,183392,Capturing Avatar,2010,documentary,6.95,110.0,0.21167021449532245,0.0
 TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,6,370464,The Masked Saint,2016,crime action,5.589,90.0,0.20223052798516009,0.0
-TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,7,1584628,Borrón y Vida Nueva,2025,comedy,8.0,11.0,0.18647891318748255,0.0
+TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,7,1584628,Borrón y Vida Nueva,2025,comedy,8.0,11.0,0.18534596278964674,0.0
 TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,8,111332,Avatar: Creating the World of Pandora,2010,documentary,6.455,177.0,0.17760324257966015,0.0
 TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,9,278698,Avatar Spirits,2010,documentary,8.012,41.0,0.17382490613971147,0.0
 TF-IDF + Cosine,Avatar,1096978,Avatar,2006,drama,10,613200,The King's Avatar: For the Glory,2019,animation action drama,6.4,73.0,0.15881833838045764,0.3333333333333333
@@ -147,9 +147,9 @@ CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,
 CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,6,12178,Miss Pettigrew Lives for a Day,2008,drama comedy romance,6.784,417.0,0.2174700439362031,1.0
 CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,7,44376,"Hollywood, je t'aime",2009,drama romance comedy,5.0,14.0,0.2152429709814003,1.0
 CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,8,460162,La barbichette,2002,comedy,7.417,12.0,0.21459601138459367,0.3333333333333333
-CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,9,520594,John Mulaney: Kid Gorgeous at Radio City,2018,comedy tv movie,7.902,244.0,0.21343665113881324,0.2
-CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,10,2148,The Cotton Club,1984,crime drama,6.515,442.0,0.21231171244918418,0.25
-TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,1,2148,The Cotton Club,1984,crime drama,6.515,442.0,0.2285551167141368,0.25
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,9,2148,The Cotton Club,1984,crime drama,6.515,442.0,0.21363867357035218,0.25
+CountVectorizer + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,10,520594,John Mulaney: Kid Gorgeous at Radio City,2018,comedy tv movie,7.902,244.0,0.21343665113881324,0.2
+TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,1,2148,The Cotton Club,1984,crime drama,6.515,442.0,0.23168719394249787,0.25
 TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,2,82144,Sun Ra: A Joyful Noise,1980,documentary music,6.409,11.0,0.20195583078589352,0.0
 TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,3,11394,Jazzclub - Der frühe Vogel fängt den Wurm,2004,comedy,5.8,23.0,0.2001857907517778,0.3333333333333333
 TF-IDF + Cosine,La La Land,313369,La La Land,2016,comedy drama romance,4,103016,Ornette: Made in America,1986,documentary music,6.5,12.0,0.19889259626153463,0.0

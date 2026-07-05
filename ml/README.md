@@ -93,6 +93,14 @@ Smoke test rekomendasi dari Qdrant:
 docker compose run --rm ml python ml/scripts/indexing/test_qdrant_search.py "Interstellar"
 ```
 
+Setelah indexing selesai, backend FastAPI dapat dijalankan dengan:
+
+```bash
+docker compose up -d backend
+```
+
+Dokumentasi endpoint tersedia di `docs/BACKEND_API.md`.
+
 ## Evaluasi Rekomendasi
 
 Setelah Qdrant terisi, jalankan evaluasi contoh rekomendasi:

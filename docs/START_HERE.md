@@ -96,4 +96,4 @@ Detail teknis ada di:
 
 - `docs/MVP_PLAN.md`
 - `docs/TASK_BREAKDOWN.md`
-
+- `docs/PRESENTATION_QA.md`
