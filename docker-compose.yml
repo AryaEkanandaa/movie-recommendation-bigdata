@@ -1,0 +1,51 @@
+services:
+  ml:
+    build:
+      context: .
+      dockerfile: ml/Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    depends_on:
+      - qdrant
+    command: bash
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.6
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    depends_on:
+      - qdrant
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    command: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000}
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL:-}
+        VITE_SUPABASE_PUBLISHABLE_KEY: ${VITE_SUPABASE_PUBLISHABLE_KEY:-}
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"

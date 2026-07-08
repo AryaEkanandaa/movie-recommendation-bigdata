@@ -1,9 +1,25 @@
+# Environment
+.env
 venv/
 .venv/
-.env
+
+# Python
 __pycache__/
 *.pyc
 
-logs/
+# OS / editor
+.DS_Store
 .ipynb_checkpoints/
-data/
+
+# Generated ML data and logs
+ml/data/**
+!ml/data/**/
+!ml/data/**/README.md
+ml/logs/
+ml/models/
+models/
+qdrant_storage/
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/
