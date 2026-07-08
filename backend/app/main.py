@@ -17,11 +17,15 @@ from .recommender import (
     apply_intent_filters,
     extract_title_candidate,
     intent_has_filters,
+    parse_fallback_intent,
 )
 from .schemas import (
     ChatRequest,
     ChatResponse,
     DiscoverMoviesResponse,
+    MovieCatalogResponse,
+    MovieConversationRequest,
+    MovieConversationResponse,
     MovieIntent,
     QueryAnalysis,
     SearchMoviesResponse,
@@ -114,6 +118,14 @@ def search_movies(
     )
 
 
+@app.get("/movies", response_model=MovieCatalogResponse)
+def list_movies(
+    request: Request,
+    limit: int = Query(default=12, ge=1, le=50),
+) -> MovieCatalogResponse:
+    return MovieCatalogResponse(results=get_recommender(request).catalog(limit))
+
+
 @app.get("/movies/discover", response_model=DiscoverMoviesResponse)
 def discover_movies(
     request: Request,
@@ -177,6 +189,55 @@ def recommend_similar(
         raise HTTPException(status_code=503, detail=str(error)) from error
 
 
+def fallback_movie_answer(movie, message: str) -> str:
+    normalized = message.lower()
+    if any(term in normalized for term in ["cerita", "sinopsis", "tentang apa", "plot"]):
+        return movie.overview or f"Sinopsis {movie.title} belum tersedia pada metadata kami."
+    if any(term in normalized for term in ["aktor", "pemain", "cast"]):
+        return f"Pemeran yang tercatat untuk {movie.title}: {movie.cast}." if movie.cast else "Data pemeran belum tersedia."
+    if any(term in normalized for term in ["sutradara", "director"]):
+        return f"{movie.title} disutradarai oleh {movie.director}." if movie.director else "Data sutradara belum tersedia."
+    if any(term in normalized for term in ["genre", "jenis film"]):
+        return f"Genre {movie.title}: {movie.genres}." if movie.genres else "Data genre belum tersedia."
+    if any(term in normalized for term in ["rating", "nilai"]):
+        return f"Rating TMDB {movie.title} adalah {movie.vote_average:.1f}/10." if movie.vote_average is not None else "Data rating belum tersedia."
+    if any(term in normalized for term in ["durasi", "berapa lama", "runtime"]):
+        return f"Durasi {movie.title} adalah {movie.runtime} menit." if movie.runtime else "Data durasi belum tersedia."
+    return (
+        f"Saya bisa membahas sinopsis, genre, sutradara, pemeran, rating, atau durasi {movie.title}. "
+        "OpenAI belum aktif, jadi pertanyaan lanjutan saat ini dijawab dari metadata terstruktur."
+    )
+
+
+@app.post("/movies/{movie_id}/chat", response_model=MovieConversationResponse)
+def chat_about_movie(
+    movie_id: int,
+    request: Request,
+    body: MovieConversationRequest,
+) -> MovieConversationResponse:
+    recommender = get_recommender(request)
+    llm: OpenAILLMService = request.app.state.llm
+    try:
+        movie = recommender.get_movie(movie_id)
+    except MovieNotFoundError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+    answer = None
+    if llm.enabled:
+        try:
+            answer = llm.answer_movie_question(movie, body.message, body.history)
+        except (OpenAIError, ValueError):
+            answer = None
+
+    llm_used = bool(answer)
+    return MovieConversationResponse(
+        movie=movie,
+        answer=answer or fallback_movie_answer(movie, body.message),
+        llm_used=llm_used,
+        llm_model=recommender.settings.openai_model if llm_used else None,
+    )
+
+
 @app.post("/chat", response_model=ChatResponse)
 def chat(request: Request, body: ChatRequest) -> ChatResponse:
     recommender = get_recommender(request)
@@ -193,6 +254,9 @@ def chat(request: Request, body: ChatRequest) -> ChatResponse:
                 interpreter = "openai"
         except (OpenAIError, ValueError):
             intent = None
+
+    if intent is None:
+        intent = parse_fallback_intent(body.message)
 
     if (
         intent

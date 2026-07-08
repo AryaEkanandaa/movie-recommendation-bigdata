@@ -43,6 +43,14 @@ GET /movies/search?title=batman&limit=10
 
 Mengembalikan kandidat judul. Endpoint ini diperlukan karena satu keyword dapat memiliki beberapa film, misalnya Batman.
 
+### Catalog movie default
+
+```text
+GET /movies?limit=12
+```
+
+Mengembalikan movie list awal untuk user yang baru login atau menekan tombol chat baru. Hasil diurutkan dari kombinasi rating, jumlah vote, popularitas, dan kualitas metadata, sehingga UI tidak kosong sebelum user mengetik query.
+
 ### Discovery berdasarkan metadata
 
 ```text
@@ -112,6 +120,26 @@ Jika `OPENAI_API_KEY` tersedia, endpoint memakai OpenAI Responses API untuk:
 4. membuat alasan rekomendasi yang natural berdasarkan kandidat backend.
 
 LLM tidak menentukan atau mengarang daftar film. Pada similarity search, film dipilih oleh Word2Vec, Qdrant, dan hybrid re-ranking. Pada metadata discovery, film dipilih oleh filter dan discovery ranking di backend.
+
+### Chat lanjutan tentang satu film
+
+```text
+POST /movies/{movie_id}/chat
+```
+
+Endpoint ini digunakan setelah user menekan recommendation card. Backend mengambil metadata film berdasarkan ID dan menjadikannya context tetap untuk percakapan turunan.
+
+```json
+{
+  "message": "Siapa sutradaranya?",
+  "history": [
+    {"role": "user", "content": "Ceritanya tentang apa?"},
+    {"role": "assistant", "content": "Film ini menceritakan..."}
+  ]
+}
+```
+
+OpenAI menerima metadata film dan maksimal 12 pesan terakhir. Jika OpenAI tidak aktif, backend tetap dapat menjawab pertanyaan dasar dari metadata terstruktur.
 
 Response `/chat` juga memuat `query_analysis` untuk transparansi proses. Field ini berisi:
 

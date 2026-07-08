@@ -5,7 +5,9 @@ from backend.app.recommender import (
     extract_title_candidate,
     intent_has_filters,
     normalize_title,
+    parse_fallback_intent,
 )
+from backend.app.main import fallback_movie_answer
 from backend.app.schemas import MovieIntent, Recommendation
 
 
@@ -78,6 +80,24 @@ class RecommenderTextTests(unittest.TestCase):
 
     def test_empty_intent_has_no_filters(self):
         self.assertFalse(intent_has_filters(MovieIntent()))
+
+    def test_fallback_intent_parses_korean_year_and_runtime(self):
+        intent = parse_fallback_intent("Film Korea setelah 2015 berdurasi maksimal 130 menit")
+        self.assertIsNotNone(intent)
+        self.assertEqual(intent.original_languages, ["ko"])
+        self.assertEqual(intent.release_year_from, 2015)
+        self.assertEqual(intent.max_runtime, 130)
+
+    def test_movie_follow_up_fallback_uses_metadata(self):
+        movie = Recommendation(
+            id=1,
+            title="Interstellar",
+            director="Christopher Nolan",
+            similarity_score=0.9,
+            hybrid_score=0.8,
+            reason="test",
+        )
+        self.assertIn("Christopher Nolan", fallback_movie_answer(movie, "Siapa sutradaranya?"))
 
 
 if __name__ == "__main__":

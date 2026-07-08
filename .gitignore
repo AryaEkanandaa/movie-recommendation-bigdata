@@ -19,3 +19,7 @@ ml/logs/
 ml/models/
 models/
 qdrant_storage/
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/

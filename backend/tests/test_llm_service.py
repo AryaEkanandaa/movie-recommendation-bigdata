@@ -27,6 +27,10 @@ class FakeResponses:
             parsed = RecommendationNarrative(message="Pilihan yang sesuai.", explanations=[])
         return SimpleNamespace(output_parsed=parsed)
 
+    def create(self, **kwargs):
+        self.calls.append(kwargs)
+        return SimpleNamespace(output_text="Jawaban tentang film.")
+
 
 class LLMServiceTests(unittest.TestCase):
     def setUp(self):
@@ -77,6 +81,19 @@ class LLMServiceTests(unittest.TestCase):
         sanitized = sanitize_movie_intent(intent)
         self.assertEqual(sanitized.reference_title, "Interstellar")
         self.assertEqual(sanitized.keywords, ["space exploration"])
+
+    def test_movie_follow_up_sends_history_without_provider_storage(self):
+        movie = MovieSummary(id=157336, title="Interstellar", director="Christopher Nolan")
+        history = [
+            SimpleNamespace(role="user", content="Ceritanya tentang apa?"),
+            SimpleNamespace(role="assistant", content="Tentang perjalanan antariksa."),
+        ]
+        answer = self.service.answer_movie_question(movie, "Siapa sutradaranya?", history)
+        call = self.responses.calls[-1]
+        self.assertEqual(answer, "Jawaban tentang film.")
+        self.assertFalse(call["store"])
+        self.assertEqual(call["input"][-1]["content"], "Siapa sutradaranya?")
+        self.assertIn("MOVIE_CONTEXT_JSON", call["instructions"])
 
 
 if __name__ == "__main__":

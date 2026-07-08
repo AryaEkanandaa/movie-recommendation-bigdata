@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from difflib import SequenceMatcher
 import math
 import re
 from typing import Any
@@ -60,6 +61,44 @@ LANGUAGE_ALIASES = {
     "spanish": "es",
 }
 
+GENRE_ALIASES = {
+    "aksi": "action",
+    "action": "action",
+    "adventure": "adventure",
+    "petualangan": "adventure",
+    "animasi": "animation",
+    "animation": "animation",
+    "komedi": "comedy",
+    "comedy": "comedy",
+    "crime": "crime",
+    "kriminal": "crime",
+    "documentary": "documentary",
+    "dokumenter": "documentary",
+    "drama": "drama",
+    "family": "family",
+    "keluarga": "family",
+    "fantasy": "fantasy",
+    "fantasi": "fantasy",
+    "history": "history",
+    "sejarah": "history",
+    "horror": "horror",
+    "horor": "horror",
+    "music": "music",
+    "musik": "music",
+    "mystery": "mystery",
+    "misteri": "mystery",
+    "romance": "romance",
+    "romantis": "romance",
+    "science fiction": "science fiction",
+    "sci fi": "science fiction",
+    "sci-fi": "science fiction",
+    "fiksi ilmiah": "science fiction",
+    "thriller": "thriller",
+    "war": "war",
+    "perang": "war",
+    "western": "western",
+}
+
 
 class MovieNotFoundError(LookupError):
     pass
@@ -78,6 +117,10 @@ def normalize_title(value: str) -> str:
 def normalize_language(value: str) -> str:
     normalized = normalize_title(value)
     return LANGUAGE_ALIASES.get(normalized, normalized)
+
+
+def title_similarity(left: str, right: str) -> float:
+    return SequenceMatcher(None, normalize_title(left), normalize_title(right)).ratio()
 
 
 def intent_has_filters(intent: MovieIntent | None) -> bool:
@@ -209,6 +252,35 @@ class MovieRecommender:
         ).head(limit)
         return [self.to_movie_summary(row) for _, row in candidates.iterrows()]
 
+    def fuzzy_search_titles(self, query: str, limit: int = 5) -> list[MovieSummary]:
+        normalized = normalize_title(query)
+        if not normalized or len(normalized) < 4:
+            return []
+
+        scored = self.movies[["id", "title", "title_normalized", "vote_count", "vote_average"]].copy()
+        scored["_title_ratio"] = scored["title_normalized"].map(
+            lambda title: SequenceMatcher(None, normalized, title).ratio()
+        )
+        scored = scored[scored["_title_ratio"] >= 0.74]
+        if scored.empty:
+            return []
+
+        scored = scored.sort_values(
+            ["_title_ratio", "vote_count", "vote_average"],
+            ascending=[False, False, False],
+        ).head(limit)
+        ids = scored["id"].tolist()
+        candidates = self.movies[self.movies["id"].isin(ids)].copy()
+        candidates["_rank"] = candidates["id"].map({movie_id: index for index, movie_id in enumerate(ids)})
+        candidates = candidates.sort_values("_rank")
+        return [self.to_movie_summary(row) for _, row in candidates.iterrows()]
+
+    def get_movie(self, movie_id: int) -> MovieSummary:
+        matches = self.movies[self.movies["id"] == movie_id]
+        if matches.empty:
+            raise MovieNotFoundError(f"Film dengan id={movie_id} tidak ditemukan.")
+        return self.to_movie_summary(matches.iloc[0])
+
     def _resolve_source(self, query: str) -> pd.Series:
         normalized = normalize_title(query)
         exact = self.movies[self.movies["title_normalized"] == normalized]
@@ -216,13 +288,49 @@ class MovieRecommender:
             return exact.iloc[0]
 
         candidates = self.search_titles(query, limit=8)
+        fuzzy_used = False
+        if not candidates:
+            candidates = self.fuzzy_search_titles(query, limit=5)
+            fuzzy_used = True
         if not candidates:
             raise MovieNotFoundError(f"Film '{query}' tidak ditemukan.")
+        if fuzzy_used and title_similarity(query, candidates[0].title) >= 0.88:
+            source_id = candidates[0].id
+            return self.movies[self.movies["id"] == source_id].iloc[0]
         if len(candidates) > 1:
             raise AmbiguousTitleError(query, candidates)
 
         source_id = candidates[0].id
         return self.movies[self.movies["id"] == source_id].iloc[0]
+
+    def catalog(self, limit: int) -> list[Recommendation]:
+        movies = self.movies.copy()
+        max_votes = math.log1p(self.normalization_stats["max_vote_count"])
+        max_popularity = math.log1p(self.normalization_stats["max_popularity"])
+        movies["_catalog_score"] = (
+            0.40 * (movies["vote_average"] / self.normalization_stats["max_vote_average"])
+            + 0.25 * (movies["vote_count"].map(math.log1p) / max_votes)
+            + 0.20 * (movies["popularity"].map(math.log1p) / max_popularity)
+            + 0.15
+            * (
+                movies["recommendation_quality_score"]
+                / self.normalization_stats["max_quality"]
+            )
+        ).clip(0.0, 1.0)
+        movies = movies.sort_values(
+            ["_catalog_score", "vote_count", "vote_average"],
+            ascending=[False, False, False],
+        ).head(limit)
+        return [
+            Recommendation(
+                **self.to_movie_summary(row).model_dump(),
+                similarity_score=0.0,
+                hybrid_score=round(float(row["_catalog_score"]), 4),
+                reason="Film populer dengan rating, vote count, dan kualitas metadata tinggi.",
+                score_type="discovery",
+            )
+            for _, row in movies.iterrows()
+        ]
 
     def _hybrid_score(self, payload: dict[str, Any], similarity_score: float) -> float:
         rating = float(value_or_none(payload.get("vote_average")) or 0.0)
@@ -373,6 +481,52 @@ def extract_title_candidate(message: str) -> str:
         if match:
             return match.group(1).strip(" .?!")
     return cleaned.strip(" .?!")
+
+
+def parse_fallback_intent(message: str) -> MovieIntent | None:
+    normalized = normalize_title(message)
+    intent = MovieIntent()
+
+    for label, code in LANGUAGE_ALIASES.items():
+        if re.search(rf"\b{re.escape(label)}\b", normalized):
+            intent.original_languages.append(code)
+
+    for label, genre in GENRE_ALIASES.items():
+        if re.search(rf"\b{re.escape(label)}\b", normalized):
+            intent.preferred_genres.append(genre)
+
+    after_match = re.search(r"(?:setelah|sesudah|mulai|dari|after|since)\s+(\d{4})", normalized)
+    if after_match:
+        intent.release_year_from = int(after_match.group(1))
+
+    before_match = re.search(r"(?:sebelum|sampai|hingga|before|until)\s+(\d{4})", normalized)
+    if before_match:
+        intent.release_year_to = int(before_match.group(1))
+
+    max_runtime_match = re.search(
+        r"(?:durasi\s*)?(?:maksimal|maximum|max|kurang dari|di bawah)\s+(\d{2,3})\s*(?:menit|min)?",
+        normalized,
+    )
+    if max_runtime_match:
+        intent.max_runtime = int(max_runtime_match.group(1))
+
+    min_runtime_match = re.search(
+        r"(?:durasi\s*)?(?:minimal|minimum|min|lebih dari)\s+(\d{2,3})\s*(?:menit|min)?",
+        normalized,
+    )
+    if min_runtime_match:
+        intent.min_runtime = int(min_runtime_match.group(1))
+
+    min_rating_match = re.search(
+        r"(?:rating|nilai)\s*(?:minimal|minimum|min|di atas|lebih dari)?\s*(\d+(?:[.,]\d+)?)",
+        normalized,
+    )
+    if min_rating_match:
+        intent.min_rating = float(min_rating_match.group(1).replace(",", "."))
+
+    intent.original_languages = sorted(set(intent.original_languages))
+    intent.preferred_genres = sorted(set(intent.preferred_genres))
+    return intent if intent_has_filters(intent) else None
 
 
 def apply_intent_filters(

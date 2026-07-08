@@ -63,6 +63,10 @@ class DiscoverMoviesResponse(BaseModel):
     results: list[Recommendation]
 
 
+class MovieCatalogResponse(BaseModel):
+    results: list[Recommendation]
+
+
 class ChatRequest(BaseModel):
     message: str = Field(min_length=1, max_length=500)
     top_k: int = Field(default=10, ge=1, le=20)
@@ -77,6 +81,23 @@ class QueryAnalysis(BaseModel):
     backend_query: str
     execution_parameters: dict[str, Any] = Field(default_factory=dict)
     steps: list[str] = Field(default_factory=list)
+
+
+class ConversationMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str = Field(min_length=1, max_length=2000)
+
+
+class MovieConversationRequest(BaseModel):
+    message: str = Field(min_length=1, max_length=500)
+    history: list[ConversationMessage] = Field(default_factory=list, max_length=20)
+
+
+class MovieConversationResponse(BaseModel):
+    movie: MovieSummary
+    answer: str
+    llm_used: bool = False
+    llm_model: str | None = None
 
 
 class ChatResponse(BaseModel):

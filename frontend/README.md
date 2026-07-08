@@ -29,3 +29,12 @@ http://localhost:3000
 ```
 
 Frontend mengakses backend melalui `VITE_API_BASE_URL`, default `http://localhost:8000`.
+
+## Nested Movie Chat dan History
+
+- Tekan **Tanya tentang film ini** pada recommendation card untuk membuat child thread.
+- Menu **History** membuka kembali seluruh movie thread.
+- Tanpa login, history disimpan di localStorage.
+- Jika `VITE_SUPABASE_URL` dan `VITE_SUPABASE_PUBLISHABLE_KEY` tersedia, user dapat login melalui magic link dan menyinkronkan history ke Supabase.
+
+Setup database dan RLS dijelaskan di `docs/NESTED_CHAT_SETUP.md`.
